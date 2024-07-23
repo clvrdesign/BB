@@ -30,36 +30,44 @@ function Navbar() {
   };
 
   return (
-    <div className="flex justify-center items-center bg-slate-50 border-b border-slate-100 p-4">
+    <div className="flex justify-center items-center bg-slate-50 border-b border-slate-100 p-4 z-10">
       <div className="container flex justify-between items-center">
-        <div className="flex items-center gap-10">
+        <div className="flex items-center lg:gap-10 gap-4">
+
           <div className="w-20">
             <Link to="/">
               <img src={assets.logo} alt="logo" className="w-full" />
             </Link>
           </div>
+
           <form className="lg:flex hidden gap-2 h-10">
             <input
               className="p-4 rounded-full text-slate-500 border border-slate-200 outline-none"
               type="text"
               placeholder="Rechercher"
+              required
             />
             <button className="bg-primary-color h-10 w-10 text-slate-50 rounded-full">
               <i className="bi bi-search"></i>
             </button>
           </form>
+
+          <div className="hover:text-primary-color lg:hidden">
+              <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-md lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-search"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
+          </div>
+
         </div>
 
         <div className="flex items-center lg:gap-20 gap-4">
           <ul className="flex lg:gap-10 gap-4 text-slate-500">
             <li className="hover:text-primary-color">
-              <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base  text-2xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-house-door"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Acceuil</label></Link>
+              <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base  text-xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-house-door"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Acceuil</label></Link>
             </li>
             <li className="hover:text-primary-color">
-              <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base  text-2xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-bell"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Notifications</label></Link>
+              <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base  text-xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-bell"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Notifications</label></Link>
             </li>
             <li className="hover:text-primary-color">
-              <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base  text-2xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-chat"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
+              <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base  text-xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-chat"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
             </li>
             
           </ul>
@@ -87,7 +95,7 @@ function Navbar() {
                     className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-200 hover:text-primary-accent rounded-full"
                     to="/"
                   >
-                    <i className="bi bi-person-add"></i> Devenir membre
+                    <i className="bi bi-people"></i> Devenir membre
                   </Link>
                 </li>
                 <li>
@@ -95,7 +103,15 @@ function Navbar() {
                     className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-200 hover:text-primary-accent rounded-full"
                     to="/"
                   >
-                    <i className="bi bi-person-add"></i> Ajouter membre
+                    <i className="bi bi-person-plus"></i> Ajouter membre
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-red-500 hover:text-white rounded-full"
+                    to="/"
+                  >
+                    <i className="bi bi-box-arrow-left"></i> Deconnexion
                   </Link>
                 </li>
               </ul>
