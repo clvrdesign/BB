@@ -58,9 +58,10 @@ function Navbar() {
 
         </div>
 
-        <div className="flex items-center lg:gap-20 gap-4">
-          <ul className="flex lg:gap-10 gap-4 text-slate-500">
-            <li className="hover:text-primary-color">
+        <div className="flex items-center lg:gap-20 gap-2">
+
+          <ul className="flex lg:gap-10 gap-2 text-slate-500">
+            <li className="hover:text-primary-color hidden lg:block">
               <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base  text-xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-house-door"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Acceuil</label></Link>
             </li>
             <li className="hover:text-primary-color">
@@ -71,6 +72,7 @@ function Navbar() {
             </li>
             
           </ul>
+
           <div ref={iconRef}  onClick={toggleProfileMenu} className="relative w-10 h-10 cursor-pointer flex justify-center items-center text-slate-50 bg-slate-400 rounded-full">
             {/*  h-full object-cover */}
             <div className="w-10 h-10 cursor-pointer flex justify-center items-center rounded-full overflow-hidden">
@@ -104,6 +106,14 @@ function Navbar() {
                     to="/"
                   >
                     <i className="bi bi-person-plus"></i> Ajouter membre
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-200 hover:text-primary-accent rounded-full"
+                    to="/"
+                  >
+                    <i className="bi bi-info-circle"></i> About
                   </Link>
                 </li>
                 <li>
