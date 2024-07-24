@@ -10,7 +10,7 @@ function Post() {
                   </div>
                   <div className="flex flex-col">
                       <p className='text-lg text-slate-800'>ID/Name here</p>
-                      <p className="text-sm text-slate-500">Bujunbura - 4 min ago</p>
+                      <p className="text-sm text-slate-500">Gitega - 4 min ago</p>
                   </div>
               </div>
               <p className="text-slate-500 mt-0.5">{56} followers</p>
