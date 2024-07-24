@@ -30,7 +30,7 @@ function Navbar() {
   };
 
   return (
-    <div className="flex justify-center items-center bg-slate-50 border-b border-slate-100 p-4 z-10">
+    <div className="h-20 flex justify-center items-center bg-slate-50 border-b border-slate-100 px-4 z-10">
       <div className="container flex justify-between items-center">
         <div className="flex items-center lg:gap-10 gap-4">
 
@@ -54,6 +54,10 @@ function Navbar() {
 
           <div className="hover:text-primary-color lg:hidden">
               <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-md lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-search"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
+          </div>
+
+          <div className="hover:text-primary-color lg:hidden">
+              <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-list"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
           </div>
 
         </div>
