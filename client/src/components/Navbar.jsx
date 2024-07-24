@@ -75,7 +75,7 @@ function Navbar() {
 
           <div ref={iconRef}  onClick={toggleProfileMenu} className="relative w-10 h-10 cursor-pointer flex justify-center items-center text-slate-50 bg-slate-400 rounded-full z-50">
             <div className="w-10 h-10 cursor-pointer flex justify-center items-center rounded-full overflow-hidden">
-                <img className='w-full h-full object-cover' src={assets.profile} alt="" />
+                <img className='w-full h-full object-cover' src={assets.imgMale} alt="" />
             </div>
 
             {profileMenu && (
