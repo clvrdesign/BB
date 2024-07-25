@@ -30,11 +30,11 @@ function Navbar() {
   };
 
   return (
-    <div className="h-20 flex justify-center items-center bg-slate-50 border-b border-slate-100 px-4 z-10">
+    <div className="sticky top-0 h-20 flex justify-center items-center bg-slate-50 border-b border-slate-100 px-4 z-10">
       <div className="container flex justify-between items-center">
         <div className="flex items-center lg:gap-10 gap-4">
 
-          <div className="w-20">
+          <div className="lg:w-20 w-16">
             <Link to="/">
               <img src={assets.logo} alt="logo" className="w-full" />
             </Link>
