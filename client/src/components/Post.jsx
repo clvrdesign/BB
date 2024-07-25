@@ -9,11 +9,11 @@ function Post() {
                       <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn9zilY2Yu2hc19pDZFxgWDTUDy5DId7ITqA&s' alt="" />
                   </div>
                   <div className="flex flex-col">
-                      <p className='text-lg text-slate-800'>ID/Name here</p>
-                      <p className="text-sm text-slate-500">Gitega - 4 min ago</p>
+                      <p className='text-base text-slate-800'>ID/Name here</p>
+                      <p className="text-sm text-slate-500">Gitega - 2 min ago</p>
                   </div>
               </div>
-              <p className="text-slate-500 mt-0.5">{56} followers</p>
+              <p className="text-sm text-slate-500 mt-0.5">{56} followers</p>
           </div>
           <div className="overflow-hidden">
             <img src="https://thumbs.dreamstime.com/b/lonely-railway-station-unsplash-generative-ai-289040966.jpg" alt="" />
