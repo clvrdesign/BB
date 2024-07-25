@@ -31,7 +31,7 @@ function Home() {
             <Post/>
             <Post/>
             <Post/>
-            
+
         </div>
       </div>
     </>

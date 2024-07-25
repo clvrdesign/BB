@@ -14,8 +14,8 @@ function Post() {
               </div>
               <p className="text-sm text-slate-500 mt-0.5">{56} followers</p>
           </div>
-          <div className="overflow-hidden">
-            <img src="https://thumbs.dreamstime.com/b/lonely-railway-station-unsplash-generative-ai-289040966.jpg" alt="" />
+          <div className="h-full overflow-hidden">
+            <img className="w-full h-full object-cover" src="https://www.imgacademy.com/sites/default/files/img-academy-organization-schema.jpg" alt="" />
           </div>
       </div>
     
