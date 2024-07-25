@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Slider from '../../components/Slider';
 import Post from '../../components/Post';
-import posts from '../../../db/posts'
 
 function Home() {
   
@@ -23,17 +22,16 @@ function Home() {
             <li className='flex items-center hover:bg-slate-100 px-4 rounded-md'><i className="bi bi-envelope"></i><Link className='w-full flex justify-between p-4' to='/'>Contactez-nous <i className="bi bi-chevron-right"></i></Link></li>
         </ul>
         <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-          {posts.map((post) => (
-            <Post
-              key={post.id}
-              profileImg={post.profileImg}
-              username={post.username}
-              province={post.province}
-              date={post.date}
-              followers={post.followers}
-              postImg={post.postImg}
-            />
-          ))}
+          
+            <Post/>
+            <Post/>
+            <Post/>
+            <Post/>
+            <Post/>
+            <Post/>
+            <Post/>
+            <Post/>
+            
         </div>
       </div>
     </>
