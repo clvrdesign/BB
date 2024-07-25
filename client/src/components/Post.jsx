@@ -1,4 +1,4 @@
-// import assets from '../assets/assets'
+import PropTypes from 'prop-types';
 
 function Post() {
   return (

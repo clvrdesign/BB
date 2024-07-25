@@ -34,7 +34,7 @@ function Navbar() {
       <div className="container flex justify-between items-center">
         <div className="flex items-center lg:gap-10 gap-4">
 
-          <div className="w-20">
+          <div className="lg:w-20 w-16">
             <Link to="/">
               <img src={assets.logo} alt="logo" className="w-full" />
             </Link>
