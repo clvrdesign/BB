@@ -1,4 +1,4 @@
-// import assets from '../assets/assets'
+import PropTypes from 'prop-types';
 
 function Post() {
   return (
@@ -13,7 +13,7 @@ function Post() {
                       <p className="text-sm text-slate-500">Gitega - 4 min ago</p>
                   </div>
               </div>
-              <p className="text-slate-500 text-sm mt-0.5">{56} followers</p>
+              <p className="text-slate-500 mt-0.5">{56} followers</p>
           </div>
           <div className="overflow-hidden">
             <img src="https://thumbs.dreamstime.com/b/lonely-railway-station-unsplash-generative-ai-289040966.jpg" alt="" />
