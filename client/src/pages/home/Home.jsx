@@ -19,7 +19,7 @@ function Home() {
             <li className='flex items-center hover:bg-slate-100 px-4 rounded-md'><i className="bi bi-calendar-date"></i><Link className='w-full flex justify-between p-4 border-b hover:border-slate-50 border-slate-200' to='/'>Calendar <i className="bi bi-chevron-right"></i></Link></li>
             <li className='flex items-center hover:bg-slate-100 px-4 rounded-md'><i className="bi bi-play-circle"></i><Link className='w-full flex justify-between p-4 border-b hover:border-slate-50 border-slate-200' to='/'>Media <i className="bi bi-chevron-right"></i></Link></li>
             <li className='flex items-center hover:bg-slate-100 px-4 rounded-md'><i className="bi bi-book"></i><Link className='w-full flex justify-between p-4 border-b hover:border-slate-50 border-slate-200' to='/'>Publications <i className="bi bi-chevron-right"></i></Link></li>
-            <li className='flex items-center hover:bg-slate-100 px-4 rounded-md'><i className="bi bi-envelope"></i><Link className='w-full flex justify-between p-4' to='/'>Contactez-nous <i className="bi bi-chevron-right"></i></Link></li>
+            <li className='flex items-center hover:bg-slate-100 px-4 rounded-md'><i className="bi bi-telephone"></i><Link className='w-full flex justify-between p-4' to='/'>Contactez-nous <i className="bi bi-chevron-right"></i></Link></li>
         </ul>
         <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
           
