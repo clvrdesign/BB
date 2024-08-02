@@ -13,7 +13,7 @@ function Sidebar() {
             <li className='flex items-center hover:bg-slate-100 px-4 rounded-md'><i className="bi bi-envelope"></i><Link className='w-full flex justify-between p-4' to='/'>Contactez-nous <i className="bi bi-chevron-right"></i></Link></li>
           </ul>
           <div className="flex flex-col">
-            <h2 className='font-bold text-xl text-slate-700 mt-5 my-2'>Top members</h2>
+            <h2 className='font-bold text-xl px-3 text-slate-700 mt-5 my-2'>Top members</h2>
             <User/>
             <User/>
             <User/>
