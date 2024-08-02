@@ -1,50 +1,74 @@
-import { Link } from 'react-router-dom';
+
+import { useState, useEffect, useRef } from 'react';
 import Navbar from '../../components/Navbar';
 import Slider from '../../components/Slider';
 import Post from '../../components/Post';
-import User from '../../components/User';
+import Sidebar from '../../components/Sidebar';
 
 function Home() {
 
+  const [sidebar, setSidebar] = useState(false);
+  const sidebarRef = useRef(null);
+  const iconRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (
+      sidebarRef.current &&
+      !sidebarRef.current.contains(event.target) &&
+      iconRef.current &&
+      !iconRef.current.contains(event.target)
+    ) {
+      setSidebar(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const toggleSidebar = () => {
+    setSidebar((prev) => !prev);
+  };
 
   return (
     <>
-      <Navbar />
-      <div className='container sm:mx-auto sm:my-5 m-auto lg:h-48 h-36 bg-slate-100 overflow-hidden sm:rounded-3xl'>
-        <Slider />
-      </div>
+      <Navbar ref={iconRef} onClick={toggleSidebar} />
+      {!sidebar &&
+        <div className='container sm:mx-auto sm:my-5 m-auto lg:h-48 h-36 bg-slate-100 overflow-hidden sm:rounded-3xl'>
+          <Slider />
+        </div>
+      }
       <div className="container flex gap-4 sm:mx-auto sm:my-5 m-auto">
-        <div className="min-w-60 lg:flex lg:flex-col hidden">
-          <ul className="w-full text-slate-500 sm:rounded-3xl">
-            <li className='flex items-center hover:bg-slate-100 px-4 rounded-md'><i className="bi bi-person-circle"></i><Link className='w-full flex justify-between p-4 border-b hover:border-slate-50 border-slate-200' to='/'>Fondateur <i className="bi bi-chevron-right"></i></Link></li>
-            <li className='flex items-center hover:bg-slate-100 px-4 rounded-md'><i className="bi bi-eye"></i><Link className='w-full flex justify-between p-4 border-b hover:border-slate-50 border-slate-200' to='/'>Vision <i className="bi bi-chevron-right"></i></Link></li>
-            <li className='flex items-center hover:bg-slate-100 px-4 rounded-md'><i className="bi bi-calendar-date"></i><Link className='w-full flex justify-between p-4 border-b hover:border-slate-50 border-slate-200' to='/'>Calendar <i className="bi bi-chevron-right"></i></Link></li>
-            <li className='flex items-center hover:bg-slate-100 px-4 rounded-md'><i className="bi bi-play-circle"></i><Link className='w-full flex justify-between p-4 border-b hover:border-slate-50 border-slate-200' to='/'>Media <i className="bi bi-chevron-right"></i></Link></li>
-            <li className='flex items-center hover:bg-slate-100 px-4 rounded-md'><i className="bi bi-book"></i><Link className='w-full flex justify-between p-4 border-b hover:border-slate-50 border-slate-200' to='/'>Publications <i className="bi bi-chevron-right"></i></Link></li>
-            <li className='flex items-center hover:bg-slate-100 px-4 rounded-md'><i className="bi bi-envelope"></i><Link className='w-full flex justify-between p-4' to='/'>Contactez-nous <i className="bi bi-chevron-right"></i></Link></li>
-          </ul>
-          <div className="flex flex-col">
-            <h2 className='font-bold text-xl text-slate-700 mt-5 my-2'>Top members</h2>
-            <User/>
-            <User/>
-            <User/>
-            <User/>
-            <User/>
+        {/* Sidebar for small */}
+        {sidebar &&
+          <div ref={sidebarRef} className="lg:min-w-60 lg:flex lg:flex-col lg:relative lg:top-0 sticky top-20 left-0 w-full h-screen  bg-slate-50">
+            <Sidebar/>
           </div>
+        }
+
+        {/* Sidebar for lager screen */}
+        <div ref={sidebarRef} className="lg:min-w-60 lg:flex lg:flex-col lg:relative lg:top-0 sticky top-20 left-0 w-full h-screen hidden  bg-slate-50">
+          <Sidebar/>
         </div>
+
         
-        <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+        {!sidebar &&
+          <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
 
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
 
-        </div>
+          </div>
+        }
       </div>
     </>
   );

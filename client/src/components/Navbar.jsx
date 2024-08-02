@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 import { assets } from '../assets/assets';
 
-function Navbar() {
+function Navbar({ onClick }) {
   const [profileMenu, setProfileMenu] = useState(false);
   const menuRef = useRef(null);
   const iconRef = useRef(null);
@@ -53,11 +54,11 @@ function Navbar() {
           </form>
 
           <div className="hover:text-primary-color lg:hidden">
-              <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-md lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-search"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
+            <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-md lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-search"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
           </div>
 
-          <div className="hover:text-primary-color lg:hidden">
-              <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-list"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
+          <div onClick={onClick} className="hover:text-primary-color lg:hidden">
+            <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-list"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
           </div>
 
         </div>
@@ -66,20 +67,19 @@ function Navbar() {
 
           <ul className="flex lg:gap-10 gap-2 text-slate-500">
             <li className="hover:text-primary-color hidden lg:block">
-              <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base  text-xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-house-door"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Acceuil</label></Link>
+              <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-house-door"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Acceuil</label></Link>
             </li>
             <li className="hover:text-primary-color">
-              <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base  text-xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-bell"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Notifications</label></Link>
+              <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-bell"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Notifications</label></Link>
             </li>
             <li className="hover:text-primary-color">
-              <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base  text-xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-chat"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
+              <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-chat"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
             </li>
-            
           </ul>
 
-          <div ref={iconRef}  onClick={toggleProfileMenu} className="relative w-10 h-10 cursor-pointer flex justify-center items-center text-slate-50 bg-slate-400 rounded-full z-50">
+          <div ref={iconRef} onClick={toggleProfileMenu} className="relative w-10 h-10 cursor-pointer flex justify-center items-center text-slate-50 bg-slate-400 rounded-full z-50">
             <div className="w-10 h-10 cursor-pointer flex justify-center items-center rounded-full overflow-hidden">
-                <img className='w-full h-full object-cover' src={assets.profile} alt="" />
+              <img className='w-full h-full object-cover' src={assets.profile} alt="" />
             </div>
 
             {profileMenu && (
@@ -135,5 +135,9 @@ function Navbar() {
     </div>
   );
 }
+
+Navbar.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
 
 export default Navbar;

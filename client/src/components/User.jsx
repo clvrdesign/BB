@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 function User({ userImg, userName, userFollowers }) {
     return (
         <div className="flex gap-2">
-            <div className="w-full flex items-center gap-2 bg-slate-100 rounded-md p-2 hover:bg-slate-200 cursor-default">
+            <div className="w-full flex items-center gap-2 rounded-md p-2 hover:bg-slate-100 cursor-default">
                 <img className='h-10 w-10 overflow-hidden object-cover rounded-full' src={userImg} alt="User avatar" />
                 <div>
                     <p className='text-slate-700 text-md'>{userName}</p>
