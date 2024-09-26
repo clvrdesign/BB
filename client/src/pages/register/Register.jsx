@@ -6,8 +6,8 @@ const Register = () => {
       <div className="md:w-3/5 w-full md:h-screen h-[20vsh] md:rounded-r-[50px] rounded-b-[50px] overflow-hidden">
         <img className="w-full h-full object-cover" src="https://pro.drc.ngo/media/1a4nktem/burundi-wedding-studio-9664.jpg?anchor=center&mode=crop&width=1200&height=630&rnd=133118445983400000" alt="" />
       </div>
-      <div className="md:w-2/5 w-full bg-white md:px-[120px] px-3">
-        <h1 className='text-2xl font-bold text-gray-600 mb-4'>Devenir Fan</h1>
+      <div className="md:w-2/5 w-full bg-white md:pt-0 pt-5 md:px-[120px] px-3">
+        <h1 className='text-[2rem] font-bold text-gray-600 mb-4'>Devenir Fan</h1>
         <form action="" className="w-full flex flex-col">
           <div className="flex flex-col gap-1 mb-2">
             <label className="text-gray-500" htmlFor="name">Nom et Prénom</label>
