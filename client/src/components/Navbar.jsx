@@ -147,7 +147,7 @@ function Navbar({ onClick }) {
           {!isFan && (
             <div className='relative flex gap-2'>
               <Button className='bg-primary-accent'>Login</Button>
-              <Button className='bg-primary-color' onClick={toggleProfileMenu}>Nous Rejoindre</Button>
+              <Button className='bg-primary-color' onClick={toggleProfileMenu}>S'inscrire</Button>
               {profileMenu && (
                 <ul
                   ref={iconRef}
