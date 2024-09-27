@@ -33,14 +33,14 @@ const Register = () => {
 
   return (
     <div className="w-full h-screen bg-white flex md:flex-row flex-col items-center justify-center">
-      <div className="md:w-3/5 w-full md:h-screen h-[20vsh] md:rounded-r-[50px] rounded-b-[50px] overflow-hidden">
+      <div className="hidden md:block md:w-3/5 w-full md:h-screen h-[20vsh] md:rounded-r-[50px] rounded-b-[50px] overflow-hidden">
         <img
           className="w-full h-full object-cover"
           src="https://pro.drc.ngo/media/1a4nktem/burundi-wedding-studio-9664.jpg?anchor=center&mode=crop&width=1200&height=630&rnd=133118445983400000"
           alt=""
         />
       </div>
-      <div className="md:w-2/5 w-full bg-white md:pt-0 pt-5 md:px-[120px] px-3">
+      <div className="md:w-2/5 w-full md:min-h-auto min-h-screen bg-white md:pt-0 pt-5 md:pb-0 pb-5 md:px-[120px] px-3 md:my-0 my-10">
         <h1 className='text-[2rem] font-bold text-gray-600 mb-4'>S&apos;inscrire</h1>
         <form className="w-full flex flex-col">
           <div className="flex flex-col gap-1 mb-2">
