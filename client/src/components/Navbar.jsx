@@ -146,7 +146,9 @@ function Navbar({ onClick }) {
           )}
           {!isFan && (
             <div className='relative flex gap-2'>
-              <Button className='bg-primary-accent'>Login</Button>
+              <Button className='bg-primary-accent'>
+                <Link to='/login'>Login</Link>
+              </Button>
               <Button className='bg-primary-color' onClick={toggleProfileMenu}>S'inscrire</Button>
               {profileMenu && (
                 <ul
