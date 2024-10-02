@@ -42,7 +42,7 @@ const Register = () => {
       <div className="md:w-2/5 w-full md:min-h-auto min-h-screen bg-white md:pt-0 pt-5 md:pb-0 pb-5 md:px-[120px] px-3 md:my-0 my-10">
         <div className="w-full min-h-screen flex flex-col justify-center py-10">
         <h1 className='text-[2rem] font-bold text-gray-600 mb-4'>Inscription Fan</h1>
-        <form className="w-full flex flex-col">
+        <form className="w-full flex flex-col gap-3">
           <div className="flex flex-col gap-1 mb-2">
             <label className="text-gray-500" htmlFor="name">Nom et Prénom</label>
             <input
@@ -61,7 +61,7 @@ const Register = () => {
               className="h-10 bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none"
             />
           </div>
-          <div className="flex flex-col gap-1 mt-4 mb-2">
+          <div className="flex flex-col gap-1 mb-2">
             <label className="text-gray-500">Nationalité</label>
             <div className="flex gap-10 h-10 bg-gray-100 px-4 rounded-md">
               <div className="flex items-center gap-2">
@@ -74,7 +74,7 @@ const Register = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-1 mt-4 mb-2">
+          <div className="flex flex-col gap-1 mb-2">
             <label className="text-gray-500">Genre</label>
             <div className="flex gap-10 h-10 bg-gray-100 px-4 rounded-md">
               <div className="flex items-center gap-2">
