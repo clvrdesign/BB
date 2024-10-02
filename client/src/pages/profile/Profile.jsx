@@ -61,6 +61,7 @@ function Profile() {
                 <i className="fi fi-sr-shield-trust text-donkey-brown-500 text-xl translate-y-1"></i>
               </h1>
               <p className='text-gray-500'>32K Followers · Junior Member</p>
+              <p className='text-gray-500'>2 Posts · Gishora, Gitega</p>
             </div>
 
             <div className=" ">
