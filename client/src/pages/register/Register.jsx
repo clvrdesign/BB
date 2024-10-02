@@ -44,7 +44,7 @@ const Register = () => {
         <div className="relative w-full min-h-screen flex flex-col justify-center py-10">
           <div className='sticky bg-white top-0 left-0 py-2'>
             <small>Inscription / 
-            <Link to='' className='pl-1 text-primary-accent'>
+            <Link to='/' className='pl-1 text-primary-accent'>
             Return to Homepage
             </Link>
             </small>
