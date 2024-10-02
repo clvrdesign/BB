@@ -149,7 +149,7 @@ function Navbar({ onClick }) {
               <Button className='bg-primary-accent'>
                 <Link to='/login'>Login</Link>
               </Button>
-              <Button className='bg-primary-color' onClick={toggleProfileMenu}>S'inscrire</Button>
+              <Button className='bg-primary-color' onClick={toggleProfileMenu}>S&apos;inscrire</Button>
               {profileMenu && (
                 <ul
                   ref={iconRef}
