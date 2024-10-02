@@ -40,7 +40,7 @@ const Register = () => {
         />
       </div>
       <div className="md:w-2/5 w-full md:min-h-auto min-h-screen bg-white md:pt-0 pt-5 md:pb-0 pb-5 md:px-[120px] px-3 md:my-0 my-10">
-        <div className="w-full h-screen flex flex-col justify-center">
+        <div className="w-full min-h-screen flex flex-col justify-center py-10">
         <h1 className='text-[2rem] font-bold text-gray-600 mb-4'>Inscription Fan</h1>
         <form className="w-full flex flex-col">
           <div className="flex flex-col gap-1 mb-2">
@@ -122,7 +122,7 @@ const Register = () => {
           <div className="flex flex-col gap-1 mb-2">
             <label className="text-gray-500">Telephone/SMS</label>
             <div className="flex gap-2 sm:flex-row flex-col items-center">
-              <select className="h-10 bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none">
+              <select className="w-full h-10 bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none">
                 <option data-countryCode="BI" value="44" selected>Burundi (+257)</option>
                 <optgroup label="Other countries">
                   <option data-countryCode="DZ" value="213">Algeria (+213)</option>
@@ -345,14 +345,14 @@ const Register = () => {
                 type="text"
                 name='phoneSMS'
                 placeholder="79 999 999"
-                className="h-10 bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none"
+                className="w-full h-10 bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none"
               />
             </div>
           </div>
           <div className="flex flex-col gap-1 mb-4">
             <label className="text-gray-500">Telephone/WhatsApp</label>
             <div className="flex gap-2 sm:flex-row flex-col items-center">
-              <select className="h-10 bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none">
+              <select className="w-full h-10 bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none">
                 <option data-countryCode="BI" value="44" selected>Burundi (+257)</option>
                 <optgroup label="Other countries">
                   <option data-countryCode="DZ" value="213">Algeria (+213)</option>
@@ -575,12 +575,13 @@ const Register = () => {
                 type="text"
                 name='phoneSMS'
                 placeholder="79 999 999"
-                className="h-10 bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none"
+                className="w-full h-10 bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none"
               />
             </div>
           </div>
           <Button className="w-full bg-primary-color px-10">Devenir Fan</Button>
-        </form></div>
+        </form>
+        </div>
       </div>
     </div>
   );
