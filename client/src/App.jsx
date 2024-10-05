@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
-import Register from './pages/register/Register';
+import RegisterFan from './pages/register/Register';
+import RegisterMem from './pages/member/Register';
 import Post from './pages/posts/Post';
 import Profile from './pages/profile/Profile';
 import ErrorPage from './pages/error/Error404';
@@ -12,7 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/register" element={<RegisterFan />} />
+        <Route path="/member/register" element={<RegisterMem />} />
         <Route path="/post" element={<Post />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/*" element={<ErrorPage />} />
