@@ -6,13 +6,6 @@ const Login = () => {
 
   return (
     <div className="w-full h-screen bg-white flex md:flex-row flex-col items-center justify-center">
-      <div className="hidden md:block md:w-3/5 w-full md:h-screen h-[20vsh] md:rounded-r-[50px] rounded-b-[50px] overflow-hidden">
-        <img
-          className="w-full h-full object-cover"
-          src="https://pro.drc.ngo/media/1a4nktem/burundi-wedding-studio-9664.jpg?anchor=center&mode=crop&width=1200&height=630&rnd=133118445983400000"
-          alt=""
-        />
-      </div>
       <div className="md:w-2/5 w-full md:min-h-auto min-h-screen bg-white md:pt-0 pt-5 md:pb-0 pb-5 md:px-[120px] px-3 md:my-0 my-10">
         <div className="relative w-full min-h-screen flex flex-col justify-center py-10">
           <div className='sticky bg-white top-0 left-0 py-2'>
