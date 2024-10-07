@@ -43,24 +43,25 @@ const Register = () => {
           <h1 className='text-[2rem] font-bold text-gray-600 mb-4'>Inscription Membre</h1>
           <form className="w-full flex flex-col gap-3">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-            <div className="flex flex-col gap-1 mb-2">
-              <label className="text-gray-500" htmlFor="name">Nom</label>
-              <input
-                type="text"
-                id='name'
-                placeholder="Bukuru"
-                className="h-10 bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none"
-              />
+              <div className="flex flex-col gap-1 mb-2">
+                <label className="text-gray-500" htmlFor="name">Nom</label>
+                <input
+                  type="text"
+                  id='name'
+                  placeholder="Bukuru"
+                  className="h-10 bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none"
+                />
+              </div>
+              <div className="flex flex-col gap-1 mb-2">
+                <label className="text-gray-500" htmlFor="name">Prénom</label>
+                <input
+                  type="text"
+                  id='name'
+                  placeholder="Jean"
+                  className="h-10 bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none"
+                />
+              </div>
             </div>
-            <div className="flex flex-col gap-1 mb-2">
-              <label className="text-gray-500" htmlFor="name">Prénom</label>
-              <input
-                type="text"
-                id='name'
-                placeholder="Jean"
-                className="h-10 bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none"
-              />
-            </div></div>
             <div className="flex flex-col gap-1 mb-2">
               <label className="text-gray-500" htmlFor="email">Email</label>
               <input
