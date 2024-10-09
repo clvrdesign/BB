@@ -21,19 +21,19 @@ function Navbar({ onClick }) {
     }
   };
 
-  
+
   useEffect(() => {
-    const verifyUserRole = ()=>{
+    const verifyUserRole = () => {
       setIsFan(isFan)
     }
-  
+
     document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('DOMContentLoaded', verifyUserRole)
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('DOMContentLoaded', verifyUserRole)
     };
-    
+
 
   }, [isFan]);
 
@@ -44,22 +44,18 @@ function Navbar({ onClick }) {
   return (
     <div className="sticky top-0 h-20 flex justify-center items-center bg-slate-50 border-b border-slate-100 px-4 z-10">
       <div className="container flex justify-between items-center">
-        <div className="flex items-center lg:gap-10 gap-4">
-
-          <div className="lg:w-20 w-16">
-            <Link to="/">
-              <img src={assets.logo} alt="logo" className="w-full" />
-            </Link>
-          </div>
-
+        <div className="flex items-center lg:gap-5 gap-3">
+          <Link to="/">
+            <img src={assets.logo} alt="logo" className="lg:w-14 lg:h-14 w-10 h-10" />
+          </Link>
           <form className="lg:flex hidden gap-2 h-10">
             <input
-              className="p-4 rounded-full text-slate-500 border border-slate-200 outline-none"
+              className="p-4 rounded-full text-slate-500 focus:border-primary-color border border-slate-200 outline-none"
               type="text"
               placeholder="Rechercher"
               required
             />
-            <button className="bg-primary-color h-10 w-10 text-slate-50 rounded-full">
+            <button className="hidden bg-primary-color h-10 w-10 text-slate-50 rounded-full">
               <i className="bi bi-search"></i>
             </button>
           </form>
@@ -211,8 +207,8 @@ function Navbar({ onClick }) {
 
 
 
+        </div>
       </div>
-    </div>
     </div >
   );
 }

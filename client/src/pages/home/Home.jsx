@@ -50,13 +50,13 @@ function Home() {
         }
 
         {/* Sidebar for lager screen */}
-        <div ref={sidebarRef} className="lg:min-w-60 lg:flex lg:flex-col lg:relative lg:top-0 sticky top-20 left-0 w-full h-screen hidden  bg-slate-50">
+        <div ref={sidebarRef} className="lg:min-w-40 lg:flex lg:flex-col lg:relative lg:top-0 sticky top-20 left-0 w-full h-screen hidden  bg-slate-50">
           <Sidebar/>
         </div>
 
         
         {!sidebar &&
-          <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+          <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 border">
 
             <Post />
             <Post />
