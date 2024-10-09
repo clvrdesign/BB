@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
-function Post() {
+function Post({VideoFrame}) {
     return (
-        <div className="flex flex-col w-auto h-[250px] bg-slate-100 border border-red-500 md:rounded-lg sm:rounded-none overflow-hidden">
+        <div className="min-w-[275px] h-[250px] flex flex-col bg-white md:rounded-lg sm:rounded-none overflow-hidden">
             <div className="flex justify-between py-2 px-4">
                 <div className="flex items-center gap-3">
                     <Link to='/profile' className="w-10 h-10 overflow-hidden rounded-full">
@@ -15,17 +16,21 @@ function Post() {
                 </div>
                 <p className="text-sm text-slate-500 mt-0.5">{56} followers</p>
             </div>
-            <Link to='/post' className="h-[175px] overflow-hidden">
+            {/* <Link to='/post' className="overflow-hidden">
                 <img
-                className="w-full h-full object-cover"
-                src="https://images.unsplash.com/photo-1721614461028-6e80fa904ba0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
+                    className="w-full h-full object-cover"
+                    src="https://www.ohchr.org/sites/default/files/styles/hero_image_2/public/Burundi-UNI180058.jpg?itok=8ez0BwIq"
+                    alt=""
                 />
-            </Link>
+            </Link> */}
+            <iframe className="w-full h-full object-cover" width="560" height="315" src={VideoFrame} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-
 
     )
 }
+
+Post.propTypes = {
+    VideoFrame: PropTypes.string.isRequired,
+};
 
 export default Post

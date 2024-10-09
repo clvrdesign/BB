@@ -1,5 +1,5 @@
 
-import logo from './logo/logo.png'
+import logo from './logo/bb-logo.svg'
 import imgFemale from './avatar_female.svg'
 import imgMale from './avatar_male.svg'
 import avatar from './avatar.svg'

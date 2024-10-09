@@ -42,30 +42,33 @@ function Navbar({ onClick }) {
   };
 
   return (
-    <div className="sticky top-0 h-20 flex justify-center items-center bg-slate-50 border-b border-slate-100 px-4 z-10">
-      <div className="container flex justify-between items-center">
+    <div className="sticky top-0 h-20 flex justify-center items-center bg-white border-b border-slate-100 px-4 z-10">
+      <div className="w-full flex justify-between items-center">
         <div className="flex items-center lg:gap-5 gap-3">
+
           <Link to="/">
-            <img src={assets.logo} alt="logo" className="lg:w-14 lg:h-14 w-10 h-10" />
+            <img src={assets.logo} alt="logo" className="w-16" />
           </Link>
-          <form className="lg:flex hidden gap-2 h-10">
+
+          <form className="relative lg:flex hidden gap-2 h-10">
             <input
-              className="p-4 rounded-full text-slate-500 focus:border-primary-color border border-slate-200 outline-none"
+              className="py-4 pl-12 rounded-full text-slate-500 bg-slate-100 focus:border-primary-color border border-slate-200 outline-none"
               type="text"
               placeholder="Rechercher"
               required
             />
+            <i className="fi fi-rr-search absolute text-slate-400 left-5 top-3"></i>
             <button className="hidden bg-primary-color h-10 w-10 text-slate-50 rounded-full">
-              <i className="bi bi-search"></i>
+            <i className="fi fi-rr-search"></i>
             </button>
           </form>
 
           <div className="hover:text-primary-color lg:hidden">
-            <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-md lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-search"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
+            <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-md lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="fi fi-rr-search translate-y-0.5"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
           </div>
 
           <div onClick={onClick} className="hover:text-primary-color lg:hidden">
-            <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="bi bi-list"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
+            <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="fi fi-rr-menu-burger translate-y-0.5"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
           </div>
 
         </div>
@@ -149,46 +152,46 @@ function Navbar({ onClick }) {
               {profileMenu && (
                 <ul
                   ref={iconRef}
-                  className="absolute top-16 right-0 w-56 bg-slate-100 text-slate-500 flex flex-col rounded-3xl p-2"
+                  className="absolute top-14 right-0 w-56 bg-white text-slate-500 flex flex-col rounded-3xl p-2"
                 >
                   <li>
                     <Link
-                      className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-200 hover:text-primary-accent rounded-full"
+                      className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-100 hover:text-primary-accent rounded-full"
                       to="/register"
                     >
-                      <i className="bi bi-person-add"></i> Devenir fan
+                      <i className="fi fi-rr-user-add translate-y-0.5"></i> Devenir fan
                     </Link>
                   </li>
                   <li>
                     <Link
-                      className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-200 hover:text-primary-accent rounded-full"
+                      className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-100 hover:text-primary-accent rounded-full"
                       to="/member/register"
                     >
-                      <i className="bi bi-people"></i> Devenir membre
+                      <i className="fi fi-rr-users translate-y-0.5"></i> Devenir membre
                     </Link>
                   </li>
                   <li>
                     <Link
-                      className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-200 hover:text-primary-accent rounded-full"
+                      className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-100 hover:text-primary-accent rounded-full"
                       to="/"
                     >
-                      <i className="bi bi-person-plus"></i> Ajouter membre
+                      <i className="fi fi-rr-user-add translate-y-0.5"></i> Ajouter membre
                     </Link>
                   </li>
                   <li>
                     <Link
-                      className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-200 hover:text-primary-accent rounded-full"
+                      className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-100 hover:text-primary-accent rounded-full"
                       to="/"
                     >
-                      <i className="bi bi-person-plus"></i> Parrainer membre
+                      <i className="fi fi-rr-user-add translate-y-0.5"></i> Parrainer membre
                     </Link>
                   </li>
                   <li>
                     <Link
-                      className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-200 hover:text-primary-accent rounded-full"
+                      className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-100 hover:text-primary-accent rounded-full"
                       to="/"
                     >
-                      <i className="bi bi-info-circle"></i> About
+                      <i className="fi fi-rr-info translate-y-0.5"></i> About
                     </Link>
                   </li>
                   <li>
@@ -196,7 +199,7 @@ function Navbar({ onClick }) {
                       className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-red-500 hover:text-white rounded-full"
                       to="/"
                     >
-                      <i className="bi bi-box-arrow-left"></i> Deconnexion
+                     <i className="fi fi-rr-exit translate-y-0.5"></i> Deconnexion
                     </Link>
                   </li>
                 </ul>
