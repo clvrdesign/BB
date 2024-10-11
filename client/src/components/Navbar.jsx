@@ -68,7 +68,7 @@ function Navbar({ onClick }) {
           </div>
 
           <div onClick={onClick} className="hover:text-primary-color lg:hidden">
-            <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-[16px] lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="fi fi-rr-menu-burger translate-y-0.5"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
+            <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-[16px] lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/sidebar"><i className="fi fi-rr-menu-burger translate-y-0.5"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
           </div>
 
         </div>

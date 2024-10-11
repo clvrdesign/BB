@@ -1,86 +1,64 @@
-
-import { useState, useEffect, useRef } from 'react';
-import Navbar from '../../components/Navbar';
-import Slider from '../../components/Slider';
+import { useState, useEffect } from 'react';
 import Post from '../../components/Post';
+import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
 function Home() {
+  const [isVisible, setIsVisible] = useState(true);
 
-  const [sidebar, setSidebar] = useState(false);
-  const sidebarRef = useRef(null);
-  const iconRef = useRef(null);
-
-  const handleClickOutside = (event) => {
-    if (
-      sidebarRef.current &&
-      !sidebarRef.current.contains(event.target) &&
-      iconRef.current &&
-      !iconRef.current.contains(event.target)
-    ) {
-      setSidebar(false);
-    }
-  };
-
+  // Handle screen width change to hide or show Sidebar
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+    const handleResize = () => {
+      if (window.innerWidth < 1024) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
     };
-  }, []);
 
-  const toggleSidebar = () => {
-    setSidebar((prev) => !prev);
-  };
+    // Initial check
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); // Empty dependency array to run only once on mount
 
   return (
     <>
-      <Navbar ref={iconRef} onClick={toggleSidebar} />
-      {!sidebar &&
-        <div className='container sm:mx-auto sm:my-5 m-auto lg:h-48 h-36 bg-slate-100 overflow-hidden sm:rounded-3xl'>
-          <Slider />
-        </div>
-      }
-      <div className="container flex gap-4 sm:mx-auto sm:my-5 m-auto">
-        {/* Sidebar for small */}
-        {sidebar &&
-          <div ref={sidebarRef} className="lg:min-w-60 lg:flex lg:flex-col lg:relative lg:top-0 sticky top-20 left-0 w-full h-screen  bg-slate-50">
-            <Sidebar/>
-          </div>
-        }
-
-        {/* Sidebar for lager screen */}
-        <div ref={sidebarRef} className="lg:min-w-60 lg:flex lg:flex-col lg:relative lg:top-0 sticky top-20 left-0 w-full h-screen hidden  bg-slate-50">
-          <Sidebar/>
-        </div>
-
-        
-        {!sidebar &&
-          <div className="flex xl:flex-row flex-col gap-4">
-            <div className="basis-3/4 px-4">
-                <h1 className="text-4xl font-bold text-slate-700 my-4">This the post title</h1>
-                <p className="text-lg text-slate-600">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ipsam alias vel, consequuntur, totam necessitatibus quos fugiat illum esse vitae quae qui minus veritatis assumenda delectus exercitationem quam.
-                    Facilis quaerat dignissimos voluptas ullam repudiandae veniam officiis nam numquam, sapiente aliquam neque vitae obcaecati quidem iste tempore aperiam, at autem temporibus voluptate.
-                    Ratione cumque totam debitis sit dolor quia beatae magni, natus ipsa? Ex eos consectetur consequuntur numquam nobis fugit doloribus? Eos qui quisquam ipsam ducimus maxime molestias,
-                    provident quidem optio aliquid eaque magnam delectus odio vel ex distinctio omnis accusantium amet? Impedit aperiam laborum aspernatur qui cupiditate culpa tempore excepturi exercitationem animi voluptatem?
-                    Rerum atque doloremque ut voluptate numquam ipsam reprehenderit ipsum. Minus nulla autem quasi id quae esse ea sed, debitis labore asperiores officiis?
-                </p>
-
-                <div className="w-full h-[350px] lg:h-[750px] overflow-hidden my-5 rounded-xl">
-                    <img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1672575659188-e7dd57652db3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJ1cnVuZGl8ZW58MHx8MHx8fDA%3D" alt="" />
-                </div>
-
+      <Navbar />
+      <div className="w-full flex gap-4 bg-slate-100">
+        {isVisible && <Sidebar />}
+        <div className="w-full flex flex-col pt-3 md:pr-3 pr-0">
+          <div className="w-full flex gap-4">
+            <div className='lg:w-3/4 w-full px-3 lg:px-0 pb-10'>
+                <Post
+                  className='sm:min-h-[515px] min-h-0'
+                  VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
+                />
+                <h2 className='text-3xl font-semibold my-6 text-slate-700'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque expedita iste quod!</h2>
+                <p className='text-sm text-slate-600 text-justify'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, nesciunt velit, voluptates exercitationem possimus ducimus, rem iste consequatur at et aliquam itaque! Sapiente ea odit inventore omnis incidunt architecto cupiditate eum sit amet, praesentium, quo totam natus pariatur nobis perspiciatis quos nam reprehenderit, eos fugit ex consectetur atque a quia! Eaque culpa consequuntur accusamus nulla, cum alias est nemo eveniet esse, perspiciatis explicabo nisi perferendis magnam veniam iure fugit earum architecto saepe ipsa maiores quidem. Omnis quae dicta praesentium dolorem ab. Esse tenetur quae minima repudiandae eaque velit eligendi numquam iure officia, nulla obcaecati et? Repellendus maiores praesentium et quis qui, commodi sed, iure quaerat placeat possimus eum fuga voluptates maxime quo minus nobis dolores amet ab reprehenderit. Quam recusandae incidunt deserunt neque ducimus aspernatur atque, modi sint magnam quo amet doloremque nisi accusantium commodi sit tempora expedita dignissimos ad iure ex nesciunt optio est? Officiis vitae doloremque nemo ipsum quod blanditiis, vel possimus eius beatae doloribus ab excepturi dicta deleniti quibusdam consequatur neque, ullam delectus velit molestiae. Harum, ea? Impedit libero, saepe perferendis assumenda corporis, necessitatibus, quidem reiciendis laboriosam consequatur provident quisquam explicabo voluptatum. Esse mollitia, ab ex magnam modi voluptate consequuntur in facilis nobis dolores blanditiis reiciendis, dolore deleniti adipisci id ducimus vitae officiis eius commodi! Unde velit nemo totam, beatae ab libero odio nesciunt reprehenderit quasi sit laudantium deserunt quibusdam cum amet placeat quae aperiam exercitationem natus omnis maxime ducimus, eum dicta tempore porro. Rem repellendus ratione ducimus nam culpa, voluptatum itaque minus enim earum? Ut, sit!</p>
             </div>
-            <div className="basis-1/4 flex flex-col gap-4">
-                <h1 className='text-2xl font-bold text-slate-700 px-4'>Related posts</h1>
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
+            <div className="hidden md:w-1/4 w-full min-h-screen lg:flex flex-col gap-4">
+              <Post
+                VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
+              />
+              <Post
+                VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
+              />
+              <Post
+                VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
+              />
+              <Post
+                VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
+              />
             </div>
           </div>
-        }
+        </div>
       </div>
     </>
   );

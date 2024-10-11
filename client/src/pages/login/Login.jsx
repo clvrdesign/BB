@@ -38,7 +38,7 @@ const Login = () => {
               Mot de passé oublié?
             </Link>
 
-            <Button className="w-full bg-primary-color px-16">Login</Button>
+            <Button className="md:w-fit w-full bg-primary-color px-16">Login</Button>
           </form>
         </div>
       </div>

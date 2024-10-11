@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import Navbar from '../../components/Navbar';
 // import Slider from '../../components/Slider';
 import Post from '../../components/Post';
-import Sidebar from '../../components/Sidebar';
+// import Sidebar from '../../components/Sidebar';
 
 function Profile() {
   const [sidebar, setSidebar] = useState(false);
@@ -33,7 +33,7 @@ function Profile() {
   return (
     <>
       <Navbar ref={iconRef} onClick={toggleSidebar} />
-      <div className="container m-auto px-4">
+      <div className="max-w-[1200px] m-auto px-4s">
         <div className="relative w-full lg:h-80 h-52 bg-donkey-brown-100 overflow-hidden rounded-none lg:rounded-b-3xl">
           <small className="absolute w-[115px] right-4 top-4 flex gap-2 justify-center items-center cursor-pointer text-white bg-gray-900 bg-opacity-30 p-2 rounded-full">
             <i className="fi fi-rr-pencil translate-y-0.5"></i>
@@ -58,10 +58,10 @@ function Profile() {
             <div className="flex flex-col items-center lg:items-start gap-2">
               <h1 className='lg:text-4xl text-2xl flex gap-2 items-center font-bold text-gray-700'>
                 ID/Username
-                <i className="fi fi-sr-shield-trust text-donkey-brown-500 text-xl translate-y-1"></i>
+                <i className="fi fi-rr-check-circle text-primary-accent text-xl translate-y-1"></i>
               </h1>
               <p className='text-gray-500'>32K Followers · Junior Member</p>
-              <p className='text-gray-500'>2 Posts · Gishora, Gitega</p>
+              <p className='hidden text-gray-500'>2 Posts · Gishora, Gitega</p>
             </div>
 
             <div className=" ">
@@ -75,31 +75,25 @@ function Profile() {
 
         </div>
 
-        <div className="container m-auto flex flex-col-reverse lg:mt-0 mt-20 gap-4 md:flex-row lg:px-0 px-4">
-          <div className="w-full flex gap-4">
-            <div className="w-[375px] p-5  lg:flex-[3] flex-1 flex-col lg:block hidden  gap-4 bg-white rounded-xl">
-              <Sidebar />
+        <div className="flex flex-col-reverse lg:mt-0 mt-20 gap-4 md:flex-row lg:px-0 px-4">
+
+
+          {!sidebar &&
+            <div className="w-full grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 pb-10">
+
+              <Post />
+              <Post />
+              <Post />
+              <Post />
+              <Post />
+              <Post />
+              <Post />
+              <Post />
+
             </div>
-
-            {!sidebar &&
-              <div className="w-full grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-
-              </div>
-            }
-          </div>
+          }
         </div>
-
       </div>
-
     </>
   )
 }

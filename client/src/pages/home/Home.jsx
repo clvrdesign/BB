@@ -40,62 +40,60 @@ function Home() {
               alt="Community Group"
             />
           </div>
-          <div className="w-full min-h-screen grid xl:grid-cols-4 lg:grid-cols-3 md:px-0 px-3 md:grid-cols-2 grid-cols-1 gap-4">
+          <div className="w-full min-h-screen grid xl:grid-cols-4 lg:grid-cols-3 md:px-0 px-3 pb-10 md:grid-cols-2 grid-cols-1 gap-4">
             <Post
               VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
-             />
-             <Post
-              VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
-             />
-             <Post
-              VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
-             />
-             <Post
-              VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
-             />
-             <Post
-              VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
-             />
-             <Post
-              VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
-             />
-             <Post
-              VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
-             />
-             <Post
-              VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
-             />
-             <Post
-              VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
-             />
-             <Post
-              VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
-             />
-             <Post
-              VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
-             />
-             <Post
-              VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
-             />
-             <Post
-              VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
-             /><Post
-             VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
             />
             <Post
-             VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
+              VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
             />
             <Post
-             VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
+              VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
             />
             <Post
-             VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
+              VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
             />
             <Post
-             VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
+              VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
             />
-
-             
+            <Post
+              VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
+            />
+            <Post
+              VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
+            />
+            <Post
+              VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
+            />
+            <Post
+              VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
+            />
+            <Post
+              VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
+            />
+            <Post
+              VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
+            />
+            <Post
+              VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
+            />
+            <Post
+              VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
+            /><Post
+              VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
+            />
+            <Post
+              VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
+            />
+            <Post
+              VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
+            />
+            <Post
+              VideoFrame={'https://www.youtube.com/embed/DlMAIYd7-J4?si=TUVdilP_SuEDiHEA'}
+            />
+            <Post
+              VideoFrame={'https://www.youtube.com/embed/vuIPxcTU2CE?si=kALpmj_iNEGxSW4g'}
+            />
           </div>
         </div>
       </div>

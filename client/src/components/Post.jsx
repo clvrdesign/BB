@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
 
-function Post({ VideoFrame, caption }) {
+function Post({ VideoFrame, caption, className }) {
     return (
-        <div className="min-w-[275px] h-[250px] flex flex-col bg-white rounded-lg overflow-hidden">
+        <div className={`min-w-[275px] h-[250px] flex flex-col bg-white rounded-lg overflow-hidden ${className}`}>
             <div className="flex justify-between py-2 px-4">
                 <div className="flex items-center gap-3">
                     <Link to='/profile' className="w-10 h-10 overflow-hidden rounded-full">
@@ -34,7 +34,8 @@ function Post({ VideoFrame, caption }) {
 
 Post.propTypes = {
     VideoFrame: PropTypes.string.isRequired,
-    caption: PropTypes.string.isRequired
+    caption: PropTypes.string.isRequired,
+    className: PropTypes.string
 };
 
 export default Post

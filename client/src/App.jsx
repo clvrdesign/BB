@@ -6,6 +6,7 @@ import RegisterMem from './pages/member/Register';
 import Post from './pages/posts/Post';
 import Profile from './pages/profile/Profile';
 import Progress from './pages/Progress';
+import Sidebar from './pages/Sidebar';
 import ErrorPage from './pages/error/Error404';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/post" element={<Post />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/progress" element={<Progress />} />
+        <Route path="/sidebar" element={<Sidebar />} />
         <Route path="/*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
