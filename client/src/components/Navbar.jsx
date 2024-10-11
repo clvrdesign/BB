@@ -42,7 +42,7 @@ function Navbar({ onClick }) {
   };
 
   return (
-    <div className="sticky top-0 h-20 flex justify-center items-center bg-white border-b border-slate-100 px-4 z-10">
+    <div className="sticky top-0 h-16 flex justify-center items-center bg-white border-b border-slate-100 px-4 z-10">
       <div className="w-full flex justify-between items-center">
         <div className="flex items-center lg:gap-5 gap-3">
 
@@ -50,25 +50,25 @@ function Navbar({ onClick }) {
             <img src={assets.logo} alt="logo" className="w-16" />
           </Link>
 
-          <form className="relative lg:flex hidden gap-2 h-10">
+          <form className="relative lg:flex items-center hidden gap-2 h-10">
             <input
-              className="py-4 pl-12 rounded-full text-slate-500 bg-slate-100 focus:border-primary-color border border-slate-200 outline-none"
+              className="h-10 pl-10 rounded-full text-[14px] text-slate-500 bg-slate-100 focus:border-primary-color border border-slate-200 outline-none"
               type="text"
               placeholder="Rechercher"
               required
             />
-            <i className="fi fi-rr-search absolute text-slate-400 left-5 top-3"></i>
+            <i className="fi fi-rr-search absolute text-slate-400 left-3 top-3"></i>
             <button className="hidden bg-primary-color h-10 w-10 text-slate-50 rounded-full">
             <i className="fi fi-rr-search"></i>
             </button>
           </form>
 
           <div className="hover:text-primary-color lg:hidden">
-            <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-md lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="fi fi-rr-search translate-y-0.5"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
+            <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-[16px] lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="fi fi-rr-search translate-y-0.5"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
           </div>
 
           <div onClick={onClick} className="hover:text-primary-color lg:hidden">
-            <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-xl lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="fi fi-rr-menu-burger translate-y-0.5"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
+            <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-[16px] lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="fi fi-rr-menu-burger translate-y-0.5"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
           </div>
 
         </div>
