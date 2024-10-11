@@ -43,7 +43,7 @@ const Register = () => {
 
   return (
     <>
-      {prod && (
+      {prod ? (
         <div className="w-full min-h-screen bg-slate-100 py-5 px-3 flex md:flex-row flex-col items-center justify-center">
           <div className="max-w-[1200px] bg-white py-10 px-10 rounded-xl">
             <div className="relative w-full flex flex-col justify-center">
@@ -619,7 +619,7 @@ const Register = () => {
               </form>
             </div>
           </div>
-        </div>)(
+        </div>) : (
           <Progress />
         )}
     </>
