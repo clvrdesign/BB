@@ -71,8 +71,8 @@ const Register = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-slate-100 py-5 px-3 flex md:flex-row flex-col items-center justify-center">
-      <div className="max-w-[1200px] bg-white py-10 px-10 rounded-xl">
+    <div className="w-full min-h-screen bg-slate-100 md:py-5 py-0 md:px-3 px-0 flex md:flex-row flex-col items-center justify-center">
+      <div className="max-w-[1200px] bg-white py-10 md:px-10 px-3 rounded-xl">
         <div className="relative w-full flex flex-col justify-center">
           <div className='sticky bg-white top-0 left-0 py-2'>
             <small>Inscription /
