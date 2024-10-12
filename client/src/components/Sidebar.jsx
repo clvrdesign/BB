@@ -8,40 +8,46 @@ function Sidebar() {
     <div className='min-w-[275px] bg-white  min-h-screen px-3 py-5'>
       <ul className="w-full text-slate-500 sm:rounded-3xl overflow-hidden">
         <li className='flex items-center hover:text-primary-color px-4 rounded-md'>
-        <i className="fi fi-rr-user translate-y-0.5"></i>
+          <i className="fi fi-rr-user translate-y-0.5"></i>
           <Link className='w-full flex justify-between p-4' to='/'>
             Fondateur
             <i className="bi bi-chevron-right"></i>
           </Link>
         </li>
         <li className='flex items-center hover:text-primary-color px-4 rounded-md'>
-        <i className="fi fi-rr-eye translate-y-0.5"></i>
+          <i className="fi fi-rr-eye translate-y-0.5"></i>
           <Link className='w-full flex justify-between p-4' to='/'>
             Vision
             <i className="bi bi-chevron-right"></i>
           </Link>
         </li>
         <li className='flex items-center hover:text-primary-color px-4 rounded-md'>
-        <i className="fi fi-rr-calendar translate-y-0.5"></i>
+          <i className="fi fi-rr-calendar translate-y-0.5"></i>
           <Link className='w-full flex justify-between p-4' to='/'>
             Calendar
             <i className="bi bi-chevron-right"></i>
           </Link>
         </li>
         <li className='flex items-center hover:text-primary-color px-4 rounded-md'>
-        <i className="fi fi-rr-play translate-y-0.5"></i>
+          <i className="fi fi-rr-play translate-y-0.5"></i>
           <Link className='w-full flex justify-between p-4' to='/'>
             Media <i className="bi bi-chevron-right"></i>
           </Link>
         </li>
         <li className='flex items-center hover:text-primary-color px-4 rounded-md'>
-        <i className="fi fi-rr-file translate-y-0.5"></i>
+          <i className="fi fi-rr-file translate-y-0.5"></i>
           <Link className='w-full flex justify-between p-4' to='/'>
             Publications <i className="bi bi-chevron-right"></i>
           </Link>
         </li>
         <li className='flex items-center hover:text-primary-color px-4 rounded-md'>
-        <i className="fi fi-rr-envelope translate-y-0.5"></i>
+          <i className="fi fi-rr-info translate-y-0.5"></i>
+          <Link className='w-full flex justify-between p-4' to='/'>
+            About <i className="bi bi-chevron-right"></i>
+          </Link>
+        </li>
+        <li className='flex items-center hover:text-primary-color px-4 rounded-md'>
+          <i className="fi fi-rr-envelope translate-y-0.5"></i>
           <Link className='w-full flex justify-between p-4' to='/'>
             Contactez-nous
             <i className="bi bi-chevron-right"></i>

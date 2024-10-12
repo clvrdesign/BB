@@ -174,7 +174,7 @@ function Navbar({ onClick }) {
               {profileMenu && (
                 <ul
                   ref={iconRef}
-                  className="absolute top-14 right-0 w-56 bg-white text-slate-500 flex flex-col rounded-3xl p-2"
+                  className="absolute top-12 right-0 w-56 bg-white text-slate-500 flex flex-col rounded-b-3xl p-2"
                 >
                   <li>
                     <Link
@@ -206,14 +206,6 @@ function Navbar({ onClick }) {
                       to="/"
                     >
                       <i className="fi fi-rr-user-add translate-y-0.5"></i> Parrainer membre
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-100 hover:text-primary-accent rounded-full"
-                      to="/"
-                    >
-                      <i className="fi fi-rr-info translate-y-0.5"></i> About
                     </Link>
                   </li>
                   <li>
