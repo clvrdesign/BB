@@ -5,7 +5,15 @@ import { Link } from 'react-router-dom'
 const Register = () => {
   const dayRef = useRef(null);
   const [isFebruary, setIsFebruary] = useState(false);
-
+  const [formValues, setFormValues] = useState({
+    lastName: '',
+    firstName: '',
+    email: '',
+    phoneSMS: '',
+    phoneWhatsApp: '',
+    year: ''
+  });
+  const [errors, setErrors] = useState({});
 
   const checkMonth = () => {
     if (dayRef.current && dayRef.current.value === '2') {
@@ -32,6 +40,36 @@ const Register = () => {
     };
   }, []);
 
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formValues.lastName) newErrors.lastName = 'Le nom est requis';
+    if (!formValues.firstName) newErrors.firstName = 'Le prénom est requis';
+    if (!formValues.email) newErrors.email = 'L\'Email est requis';
+    if (!/\S+@\S+\.\S+/.test(formValues.email)) newErrors.email = 'L\'email est invalide';
+    if (!formValues.phoneSMS) newErrors.phoneSMS = 'Le numéro de téléphone est requis';
+    if (!/^[0-9]{8}$/.test(formValues.phoneSMS)) newErrors.phoneSMS = 'Phone number must be 8 digits';
+    if (!formValues.year) newErrors.year = 'Year of birth is required';
+    return newErrors;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length === 0) {
+      console.log('Form submitted', formValues);
+    } else {
+      setErrors(validationErrors);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({
+      ...formValues,
+      [name]: value
+    });
+  };
+
   return (
     <div className="w-full min-h-screen bg-slate-100 py-5 px-3 flex md:flex-row flex-col items-center justify-center">
       <div className="max-w-[1200px] bg-white py-10 px-10 rounded-xl">
@@ -42,7 +80,7 @@ const Register = () => {
             </small>
           </div>
           <h1 className='text-[2rem] font-bold text-gray-600 mb-4'>Inscription Fan</h1>
-          <form className="w-full flex flex-col gap-3">
+          <form onSubmit={handleSubmit} className="w-full flex flex-col gap-3">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <div className="flex flex-col gap-1 mb-2">
                 <label className="text-gray-500 text-sm" htmlFor="name">Nom</label>
@@ -50,8 +88,9 @@ const Register = () => {
                   type="text"
                   id='name'
                   placeholder="Bukuru"
-                  className="h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none"
+                  className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none ${errors.firstName ? 'border-red-500' : ''}`}
                 />
+                {errors.lastName && <span className="text-red-500 text-sm">{errors.firstName}</span>}
               </div>
               <div className="flex flex-col gap-1 mb-2">
                 <label className="text-gray-500 text-sm" htmlFor="name">Prénom</label>
@@ -59,8 +98,9 @@ const Register = () => {
                   type="text"
                   id='name'
                   placeholder="Jean"
-                  className="h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none"
+                  className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none ${errors.lastName ? 'border-red-500' : ''}`}
                 />
+                {errors.lastName && <span className="text-red-500 text-sm">{errors.lastName}</span>}
               </div></div>
             <div className="flex flex-col gap-1 mb-2">
               <label className="text-gray-500 text-sm" htmlFor="email">Email</label>
@@ -68,8 +108,9 @@ const Register = () => {
                 type="email"
                 id='email'
                 placeholder="Jean@email.com"
-                className="h-10 bg-gray-100 px-4 text-sm rounded-md focus:border-primary-color border outline-none"
+                className={`h-10 bg-gray-100 px-4 text-sm rounded-md focus:border-primary-color border outline-none ${errors.email ? 'border-red-500' : ''}`}
               />
+              {errors.lastName && <span className="text-red-500 text-sm">{errors.email}</span>}
             </div>
             <div className="flex flex-col gap-1 mb-2">
               <label className="text-gray-500 text-sm">Nationalité</label>
