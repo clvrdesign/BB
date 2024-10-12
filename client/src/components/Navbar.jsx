@@ -3,9 +3,11 @@ import { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { assets } from '../assets/assets';
 import Button from './Button';
+import Search from './Search';
 
 function Navbar({ onClick }) {
   const [isFan, setIsFan] = useState(false)
+  const [search, isSearch] = useState(false)
   const [profileMenu, setProfileMenu] = useState(false);
   const menuRef = useRef(null);
   const iconRef = useRef(null);
@@ -21,6 +23,9 @@ function Navbar({ onClick }) {
     }
   };
 
+  const searchToggle = () => {
+    isSearch((prev) => !prev)
+  }
 
   useEffect(() => {
     const verifyUserRole = () => {
@@ -59,14 +64,31 @@ function Navbar({ onClick }) {
             />
             <i className="fi fi-rr-search absolute text-slate-400 left-3 top-3"></i>
             <button className="hidden bg-primary-color h-10 w-10 text-slate-50 rounded-full">
-            <i className="fi fi-rr-search"></i>
+              <i className="fi fi-rr-search"></i>
             </button>
           </form>
 
           <div className="hover:text-primary-color lg:hidden">
-            <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-[16px] lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/"><i className="fi fi-rr-search translate-y-0.5"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
+            <div onClick={searchToggle} className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-[16px] lg:text-slate-500 text-slate-500 bg-slate-200 cursor-pointer rounded-full"><i className="fi fi-rr-search translate-y-0.5"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></div>
           </div>
 
+          {/* Search form on mobile */}
+          {search &&
+            <Search>
+              <form className="relative flex lg:hidden items-center gap-2 h-10">
+                <input
+                  className="w-full h-10 pl-10 rounded-full text-[14px] text-slate-500 bg-slate-100 focus:border-primary-color border border-slate-200 outline-none"
+                  type="text"
+                  placeholder="Rechercher"
+                  required
+                />
+                <i className="fi fi-rr-search absolute text-slate-400 left-3 top-3"></i>
+                <button className="hidden bg-primary-color h-10 w-10 text-slate-50 rounded-full">
+                  <i className="fi fi-rr-search"></i>
+                </button>
+              </form>
+            </Search>
+          }
           <div onClick={onClick} className="hover:text-primary-color lg:hidden">
             <Link className="w-10 h-10 flex lg:w-auto lg:h-auto lg:bg-transparent lg:gap-2 justify-center items-center lg:text-base text-[16px] lg:text-slate-500 text-slate-500 bg-slate-200 rounded-full" to="/sidebar"><i className="fi fi-rr-menu-burger translate-y-0.5"></i> <label className='lg:block cursor-pointer className="flex gap-2" hidden'>Messages</label></Link>
           </div>
@@ -199,7 +221,7 @@ function Navbar({ onClick }) {
                       className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-red-500 hover:text-white rounded-full"
                       to="/"
                     >
-                     <i className="fi fi-rr-exit translate-y-0.5"></i> Deconnexion
+                      <i className="fi fi-rr-exit translate-y-0.5"></i> Deconnexion
                     </Link>
                   </li>
                 </ul>
