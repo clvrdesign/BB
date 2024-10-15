@@ -62,13 +62,15 @@ const Register = () => {
     }
   };
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues({
-      ...formValues,
-      [name]: value
-    });
+  const handleInputChange = () => {
+    // const { name, value } = e.target;
+    // setFormValues({
+    //   ...formValues,
+    //   [name]: value
+    // });
   };
+
+  handleInputChange()
 
   return (
     <div className="w-full min-h-screen bg-slate-100 md:py-5 py-0 md:px-3 px-0 flex md:flex-row flex-col items-center justify-center">
