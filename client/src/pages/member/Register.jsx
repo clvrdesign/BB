@@ -85,7 +85,7 @@ const Register = () => {
           <form onSubmit={handleSubmit} className="w-full flex flex-col gap-3">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <div className="flex flex-col gap-1 mb-2">
-                <label className="text-gray-500 text-sm" htmlFor="name">Nom</label>
+                <label className="text-gray-500 text-sm" htmlFor="name">Nom(s)</label>
                 <input
                   type="text"
                   id='name'
@@ -95,7 +95,7 @@ const Register = () => {
                 {errors.lastName && <span className="text-red-500 text-sm">{errors.firstName}</span>}
               </div>
               <div className="flex flex-col gap-1 mb-2">
-                <label className="text-gray-500 text-sm" htmlFor="name">Prénom</label>
+                <label className="text-gray-500 text-sm" htmlFor="name">Prénom(s)</label>
                 <input
                   type="text"
                   id='name'
