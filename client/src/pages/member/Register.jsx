@@ -106,6 +106,16 @@ const Register = () => {
               </div>
             </div>
             <div className="flex flex-col gap-1 mb-2">
+              <label className="text-gray-500 text-sm" htmlFor="email">Nom d'utilisateur</label>
+              <input
+                type="email"
+                id='email'
+                placeholder="iamjohn"
+                className={`h-10 bg-gray-100 px-4 text-sm rounded-md focus:border-primary-color border outline-none ${errors.email ? 'border-red-500' : ''}`}
+              />
+              {errors.lastName && <span className="text-red-500 text-sm">{errors.email}</span>}
+            </div>
+            <div className="flex flex-col gap-1 mb-2">
               <label className="text-gray-500 text-sm" htmlFor="email">Email</label>
               <input
                 type="email"
@@ -127,6 +137,7 @@ const Register = () => {
                 />
                 {errors.lastName && <span className="text-red-500 text-sm">{errors.firstName}</span>}
               </div>
+
               <div className="flex flex-col gap-1 mb-2">
                 <label className="text-gray-500 text-sm" htmlFor="confirmPassword">Confirmer mot de passe</label>
                 <input
@@ -1424,7 +1435,7 @@ const Register = () => {
                 </small>
               </label>
             </div>
-            <Button className="md:w-fit w-full bg-primary-color px-10">Devenir Fan</Button>
+            <Button className="md:w-fit w-full bg-primary-color px-10">Devenir Membre</Button>
           </form>
         </div>
       </div>
