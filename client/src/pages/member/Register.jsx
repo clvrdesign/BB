@@ -8,10 +8,20 @@ const Register = () => {
   const [formValues, setFormValues] = useState({
     lastName: '',
     firstName: '',
+    username: '',
     email: '',
+    password: '',
+    confirmPassword: '',
+    nationality_one: '',
+    nationality_two: '',
+    genre: '',
+    day: '',
+    month: '',
+    year: '',
+    birthPlace: '',
+    country: '',
     phoneSMS: '',
     phoneWhatsApp: '',
-    year: ''
   });
   const [errors, setErrors] = useState({});
 
@@ -62,15 +72,15 @@ const Register = () => {
     }
   };
 
-  const handleInputChange = () => {
-    // const { name, value } = e.target;
-    // setFormValues({
-    //   ...formValues,
-    //   [name]: value
-    // });
-  };
+  // const handleInputChange = () => {
+  //   const { name, value } = e.target;
+  //   setFormValues({
+  //     ...formValues,
+  //     [name]: value
+  //   });
+  // };
 
-  handleInputChange()
+  // handleInputChange()
 
   return (
     <div className="w-full min-h-screen bg-slate-100 md:py-5 py-0 md:px-3 px-0 flex md:flex-row flex-col items-center justify-center">
