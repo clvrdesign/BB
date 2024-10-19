@@ -195,7 +195,7 @@ const AddMem = () => {
 
             <fieldset className='w-full'>
               <legend className="text-lg font-bold text-gray-600 mb-2">5.Expérience professionelle</legend>
-              <textarea className='w-full h-40 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none' name="" id=""></textarea>
+              <textarea className='w-full h-40 bg-gray-100 text-sm p-4 rounded-md focus:border-primary-color border outline-none' name="" id=""></textarea>
 
 
             </fieldset>
@@ -224,7 +224,7 @@ const AddMem = () => {
 
               <fieldset className='w-full'>
               <legend className="text-lg font-bold text-gray-600 mb-2">7. Passé politique</legend>
-              <textarea className='w-full h-40 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none' name="" id=""></textarea>
+              <textarea className='w-full h-40 bg-gray-100 text-sm p-4 rounded-md focus:border-primary-color border outline-none' name="" id=""></textarea>
 
 
             </fieldset>
