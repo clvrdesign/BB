@@ -61,7 +61,7 @@ const AddMem = () => {
             <fieldset>
               <legend className="text-lg font-bold text-gray-600 mb-2">1. Type de volontariat</legend>
 
-              <div className="grid sm:grid-cols-2 grid-cols-1">
+              <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
                 <div className='flex gap-1'>
                   <input type="checkbox" name="" id="add" />
                   <label htmlFor="add" className='text-gray-600 text-sm'>Enregistrat membre</label>
