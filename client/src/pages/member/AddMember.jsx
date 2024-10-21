@@ -177,7 +177,7 @@ const AddMem = () => {
             <fieldset>
               <legend className="text-lg font-bold text-gray-600 mb-2">6. Appartenance ethnique</legend>
 
-              <div className="grid sm:grid-cols-3 grid-cols-1">
+              <div className="grid sm:grid-cols-3 grid-cols-1 gap-2">
                 <div className='flex gap-1'>
                   <input type="radio" name="ethnic" id="add" />
                   <label htmlFor="add" className='text-gray-600 text-sm'>Umuhutu</label>
