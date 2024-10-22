@@ -153,7 +153,6 @@ function Navbar({ onClick }) {
                         <i className="bi bi-person-add"></i> Devenir candidat
                       </Link>
                     </li>
-
                     <li>
                       <Link
                         className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-200 hover:text-primary-accent rounded-full"
@@ -218,14 +217,6 @@ function Navbar({ onClick }) {
                       <i className="fi fi-rr-users translate-y-0.5"></i> Devenir membre
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-200 hover:text-primary-accent rounded-full"
-                      to="/member/register"
-                    >
-                      <i className="fi fi-rr-user-add translate-y-0.5"></i> Devenir membre actif
-                    </Link>
-                  </li>
 
                   <li>
                     <Link
@@ -240,7 +231,7 @@ function Navbar({ onClick }) {
                       className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-100 hover:text-primary-accent rounded-full"
                       to="/member/addMember"
                     >
-                      <i className="fi fi-rr-user-add translate-y-0.5"></i> Membre actif
+                      <i className="fi fi-rr-user-add translate-y-0.5"></i> Devenir volontaire
                     </Link>
                   </li>
                   <li>
@@ -271,9 +262,6 @@ function Navbar({ onClick }) {
               )}
             </div>
           )}
-
-
-
 
         </div>
       </div>
