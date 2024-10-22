@@ -8,7 +8,7 @@ function User({ userName, userFollowers }) {
                 <img className='h-10 w-10 overflow-hidden object-cover rounded-full' src={assets.val} alt="User avatar" />
                 <div>
                     <p className='text-slate-700 text-md'>{userName}</p>
-                    <small className='block text-slate-500 -translate-y-0.5'>{userFollowers}K followers</small>
+                    <small className='block text-slate-500 -translate-y-0.5'>{userFollowers}M followers</small>
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@ User.propTypes = {
 User.defaultProps = {
     // userImg: {assets.val},
     userName: "Admin Ad",
-    userFollowers: 14
+    userFollowers: 51
 };
 
 export default User;
