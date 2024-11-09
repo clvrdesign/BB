@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import RegisterFan from './pages/register/Register';
@@ -11,6 +11,12 @@ import Sidebar from './pages/Sidebar';
 import ErrorPage from './pages/error/Error404';
 
 function App() {
+  const location = useLocation()
+
+  if(location.pathname = 'burundibushasha.vercel.app'){
+    return null
+  }
+
   return (
     <BrowserRouter>
       <Routes>
