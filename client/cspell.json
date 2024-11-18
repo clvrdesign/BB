@@ -8,6 +8,8 @@
         "Fondateur",
         "Rechercher"
     ],
-    "ignoreWords": [],
+    "ignoreWords": [
+        "Buhire"
+    ],
     "import": []
 }
