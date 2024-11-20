@@ -72,15 +72,15 @@ const Register = () => {
     }
   };
 
-  // const handleInputChange = () => {
-  //   const { name, value } = e.target;
-  //   setFormValues({
-  //     ...formValues,
-  //     [name]: value
-  //   });
-  // };
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({
+      ...formValues,
+      [name]: value
+    });
+  };
 
-  // handleInputChange()
+  handleInputChange()
 
   return (
     <div className="w-full min-h-screen bg-slate-100 md:py-5 py-0 md:px-3 px-0 flex md:flex-row flex-col items-center justify-center">
@@ -116,7 +116,7 @@ const Register = () => {
               </div>
             </div>
             <div className="flex flex-col gap-1 mb-2">
-              <label className="text-gray-500 text-sm" htmlFor="email">Nom d'utilisateur</label>
+              <label className="text-gray-500 text-sm" htmlFor="email">Nom d&apos;utilisateur</label>
               <input
                 type="email"
                 id='email'
@@ -217,7 +217,7 @@ const Register = () => {
                   <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
                   <option value="Cook Islands">Cook Islands</option>
                   <option value="Costa Rica">Costa Rica</option>
-                  <option value="Cote D'ivoire">Cote D'ivoire</option>
+                  <option value="Cote D'ivoire">Cote D&apos;ivoire</option>
                   <option value="Croatia">Croatia</option>
                   <option value="Cuba">Cuba</option>
                   <option value="Cyprus">Cyprus</option>
@@ -279,11 +279,11 @@ const Register = () => {
                   <option value="Kazakhstan">Kazakhstan</option>
                   <option value="Kenya">Kenya</option>
                   <option value="Kiribati">Kiribati</option>
-                  <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                  <option value="Korea, Democratic People's Republic of">Korea, Democratic People&apos;s Republic of</option>
                   <option value="Korea, Republic of">Korea, Republic of</option>
                   <option value="Kuwait">Kuwait</option>
                   <option value="Kyrgyzstan">Kyrgyzstan</option>
-                  <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                  <option value="Lao People's Democratic Republic">Lao People&apos;s Democratic Republic</option>
                   <option value="Latvia">Latvia</option>
                   <option value="Lebanon">Lebanon</option>
                   <option value="Lesotho">Lesotho</option>
@@ -468,7 +468,7 @@ const Register = () => {
                   <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
                   <option value="Cook Islands">Cook Islands</option>
                   <option value="Costa Rica">Costa Rica</option>
-                  <option value="Cote D'ivoire">Cote D'ivoire</option>
+                  <option value="Cote D'ivoire">Cote D&apos;ivoire</option>
                   <option value="Croatia">Croatia</option>
                   <option value="Cuba">Cuba</option>
                   <option value="Cyprus">Cyprus</option>
@@ -530,11 +530,11 @@ const Register = () => {
                   <option value="Kazakhstan">Kazakhstan</option>
                   <option value="Kenya">Kenya</option>
                   <option value="Kiribati">Kiribati</option>
-                  <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                  <option value="Korea, Democratic People's Republic of">Korea, Democratic People&apos;s Republic of</option>
                   <option value="Korea, Republic of">Korea, Republic of</option>
                   <option value="Kuwait">Kuwait</option>
                   <option value="Kyrgyzstan">Kyrgyzstan</option>
-                  <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                  <option value="Lao People's Democratic Republic">Lao People&apos;s Democratic Republic</option>
                   <option value="Latvia">Latvia</option>
                   <option value="Lebanon">Lebanon</option>
                   <option value="Lesotho">Lesotho</option>
@@ -775,7 +775,7 @@ const Register = () => {
                   <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
                   <option value="Cook Islands">Cook Islands</option>
                   <option value="Costa Rica">Costa Rica</option>
-                  <option value="Cote D'ivoire">Cote D'ivoire</option>
+                  <option value="Cote D'ivoire">Cote D&apos;ivoire</option>
                   <option value="Croatia">Croatia</option>
                   <option value="Cuba">Cuba</option>
                   <option value="Cyprus">Cyprus</option>
@@ -837,11 +837,11 @@ const Register = () => {
                   <option value="Kazakhstan">Kazakhstan</option>
                   <option value="Kenya">Kenya</option>
                   <option value="Kiribati">Kiribati</option>
-                  <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                  <option value="Korea, Democratic People's Republic of">Korea, Democratic People&apos;s Republic of</option>
                   <option value="Korea, Republic of">Korea, Republic of</option>
                   <option value="Kuwait">Kuwait</option>
                   <option value="Kyrgyzstan">Kyrgyzstan</option>
-                  <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                  <option value="Lao People's Democratic Republic">Lao People&apos;s Democratic Republic</option>
                   <option value="Latvia">Latvia</option>
                   <option value="Lebanon">Lebanon</option>
                   <option value="Lesotho">Lesotho</option>
