@@ -33,7 +33,7 @@ function Home() {
       <Navbar />
       <div className="w-full flex gap-4 bg-slate-100">
         {isVisible && <Sidebar />}
-        <div className="w-full flex flex-col pt-3 md:pr-3 pr-0">
+        <div className="max-w-[1400px] m-auto flex flex-col pt-3 md:pr-3 pr-0">
           <div className="w-full flex gap-4">
             <div className='w-full px-3 lg:px-0 pb-10'>
                 <Post

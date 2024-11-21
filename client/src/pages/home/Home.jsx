@@ -33,9 +33,10 @@ function Home() {
       <Navbar />
       <div className="w-full flex gap-4 bg-slate-100">
         {isVisible && <Sidebar />}
-        <div className="flex flex-col lg:pr-3 pr-0">
+        <div className="max-w-[1400px] m-auto flex flex-col lg:pr-3 pr-0">
           <div className="w-full h-60 bg-white lg:mt-4 mt-0 mb-4 lg:rounded-lg rounded-none overflow-hidden">
             <img
+              className='w-full h-full object-cover'
               src="https://lutheranworld.org/sites/default/files/2024-02/burundi-communities-group.jpg"
               alt="Community Group"
             />
