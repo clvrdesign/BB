@@ -57,14 +57,37 @@ const AddMem = () => {
           </div>
           <h1 className='text-[2rem] font-bold text-gray-600 mb-4'>Devenir Membre Actif</h1>
           <form onSubmit='' className="w-full flex flex-col gap-3">
+          <fieldset>
+              <div className="grid sm:grid-cols-3 grid-cols-1 gap-2">
+                <input
+                  type="text"
+                  id=''
+                  placeholder="User ID"
+                  className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none `}
+                />
+                <input
+                  type="text"
+                  id='confirmPassword'
+                  placeholder="Nom d&apos;utilisateur"
+                  className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none `}
+                />
+                <input
+                  type="password"
+                  id='confirmPassword'
+                  placeholder="Password"
+                  className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none `}
+                />
 
+              </div>
+
+            </fieldset>
             <fieldset>
               <legend className="text-lg font-bold text-gray-600 mb-2">1. Type de volontariat</legend>
 
               <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
                 <div className='flex gap-1'>
                   <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Enregistrat membre</label>
+                  <label htmlFor="add" className='text-gray-600 text-sm'>Enregistrer membres</label>
                 </div>
 
                 <div className='flex items-center gap-1'>
@@ -89,7 +112,7 @@ const AddMem = () => {
                 </div>
                 <div className='flex gap-1'>
                   <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Mandataire politique</label>
+                  <label htmlFor="add" className='text-gray-600 text-sm'>Mandataire/Observateur politique</label>
                 </div>
               </div>
 
@@ -169,7 +192,7 @@ const AddMem = () => {
 
             <fieldset className='w-full'>
               <legend className="text-lg font-bold text-gray-600 mb-2">5.Expérience professionelle</legend>
-              <textarea className='w-full h-40 bg-gray-100 text-sm px-4 py-3 rounded-md focus:border-primary-color border outline-none' name="" id=""></textarea>
+              <textarea className='w-full h-40 bg-gray-100 text-sm px-4 py-3 rounded-md focus:border-primary-color border outline-none' placeholder="Max: 500 caractères" name="" id=""></textarea>
 
 
             </fieldset>
@@ -178,6 +201,10 @@ const AddMem = () => {
               <legend className="text-lg font-bold text-gray-600 mb-2">6. Appartenance ethnique</legend>
 
               <div className="grid sm:grid-cols-3 grid-cols-1 gap-2">
+                <div className='flex gap-1'>
+                  <input type="radio" name="ethnic" id="add" />
+                  <label htmlFor="add" className='text-gray-600 text-sm'>Umuganwa</label>
+                </div>
                 <div className='flex gap-1'>
                   <input type="radio" name="ethnic" id="add" />
                   <label htmlFor="add" className='text-gray-600 text-sm'>Umuhutu</label>
@@ -198,7 +225,7 @@ const AddMem = () => {
 
             <fieldset className='w-full'>
               <legend className="text-lg font-bold text-gray-600 mb-2">7. Passé politique</legend>
-              <textarea className='w-full h-40 bg-gray-100 text-sm px-4 py-3 rounded-md focus:border-primary-color border outline-none' name="" id=""></textarea>
+              <textarea className='w-full h-40 bg-gray-100 text-sm px-4 py-3 rounded-md focus:border-primary-color border outline-none' placeholder="Max: 500 caractères" name="" id=""></textarea>
 
 
             </fieldset>

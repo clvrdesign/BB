@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import Navbar from '../../components/Navbar';
 // import Slider from '../../components/Slider';
 import Post from '../../components/Post';
+import { assets } from '../../assets/assets';
 // import Sidebar from '../../components/Sidebar';
 
 function Profile() {
@@ -45,7 +46,7 @@ function Profile() {
         <div className="relative w-full h-[150px] grid grid-cols-1 place-items-center">
 
           <div className="relative lg:absolute lg:left-14 lg:w-40 lg:h-40 w-32 h-32 -translate-y-1/2  border-4 lg:border-8 border-white bg-white rounded-full overflow-hidden">
-            <img className='w-full h-full object-cover' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8F-9zYH8WnIp746qZrmB2UclOwI2Ays9yWg&s' alt="" />
+            <img className='w-full h-full object-cover' src={assets.val} alt="" />
           </div>
 
           {/* Online status */}

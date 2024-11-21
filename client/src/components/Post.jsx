@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
+import { assets } from '../assets/assets';
 
 function Post({ VideoFrame, caption, className }) {
     return (
@@ -7,7 +8,7 @@ function Post({ VideoFrame, caption, className }) {
             <div className="flex justify-between py-2 px-4">
                 <div className="flex items-center gap-3">
                     <Link to='/profile' className="w-10 h-10 overflow-hidden rounded-full">
-                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn9zilY2Yu2hc19pDZFxgWDTUDy5DId7ITqA&s' alt="" />
+                        <img src={assets.val} alt="" />
                     </Link>
                     <div className="flex flex-col">
                         <p className='text-base text-slate-800'>ID/Name here</p>

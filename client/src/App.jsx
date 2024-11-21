@@ -11,6 +11,7 @@ import Sidebar from './pages/Sidebar';
 import ErrorPage from './pages/error/Error404';
 
 function App() {
+
   return (
     <BrowserRouter>
       <Routes>
