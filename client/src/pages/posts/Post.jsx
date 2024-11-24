@@ -3,7 +3,7 @@ import Post from '../../components/Post';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
-function Home() {
+function PostComp() {
   const [isVisible, setIsVisible] = useState(true);
 
   // Handle screen width change to hide or show Sidebar
@@ -64,4 +64,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default PostComp;
