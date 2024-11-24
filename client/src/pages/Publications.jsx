@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Post from "../components/Post";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 
@@ -46,31 +45,66 @@ function Publications() {
             Publications récents
           </h1>
           <div className="w-full grid grid-cols-1 gap-4 lg:pl-0 pl-3 pb-10 border border-sky-500">
-            <Link to={'https://drive.google.com/file/d/1B5NQWeVF3yI4rWVK3XuZX1S4_54W0SGN/view?usp=drive_link'} className="w-full p-4 text-slate-700 hover:text-primary-accent bg-white rounded-lg">
+            <Link
+              to={
+                "https://drive.google.com/file/d/1B5NQWeVF3yI4rWVK3XuZX1S4_54W0SGN/view?usp=drive_link"
+              }
+              className="w-full p-4 text-slate-700 hover:text-primary-accent bg-white rounded-lg"
+            >
               <i className="fi fi-rr-file-pdf inline-block mr-1 translate-y-0.5"></i>
               Décret portant organisation et Fonctionnement CENI_2024.pdf
             </Link>
-            <Link to={'https://drive.google.com/file/d/18YjwvIvA7xYgry2lSCr9oO8jL-zb8RDm/view?usp=drive_link'} className="w-full p-4 text-slate-700 hover:text-primary-accent bg-white rounded-lg">
+            <Link
+              to={
+                "https://drive.google.com/file/d/18YjwvIvA7xYgry2lSCr9oO8jL-zb8RDm/view?usp=drive_link"
+              }
+              className="w-full p-4 text-slate-700 hover:text-primary-accent bg-white rounded-lg"
+            >
               <i className="fi fi-rr-file-pdf inline-block mr-1 translate-y-0.5"></i>
               Constitution du Burundi_2005.pdf
             </Link>
-            <Link to={'https://drive.google.com/file/d/1jwIsU6w9NLSDNi_P1UOswn2uIg2_o6AS/view?usp=drive_link'} className="w-full p-4 text-slate-700 hover:text-primary-accent bg-white rounded-lg">
+            <Link
+              to={
+                "https://drive.google.com/file/d/1jwIsU6w9NLSDNi_P1UOswn2uIg2_o6AS/view?usp=drive_link"
+              }
+              className="w-full p-4 text-slate-700 hover:text-primary-accent bg-white rounded-lg"
+            >
               <i className="fi fi-rr-file-pdf inline-block mr-1 translate-y-0.5"></i>
               Constitution du Burundi_7 juin 2018.pdf
             </Link>
-            <Link to={'https://drive.google.com/file/d/1g_tubi7QsJrgFNPVuv0H3HpZ_TowEcAP/view?usp=drive_link'} className="w-full p-4 text-slate-700 hover:text-primary-accent bg-white rounded-lg">
+            <Link
+              to={
+                "https://drive.google.com/file/d/1g_tubi7QsJrgFNPVuv0H3HpZ_TowEcAP/view?usp=drive_link"
+              }
+              className="w-full p-4 text-slate-700 hover:text-primary-accent bg-white rounded-lg"
+            >
               <i className="fi fi-rr-file-pdf inline-block mr-1 translate-y-0.5"></i>
               Code Electoral du Burundi_2024.pdf
             </Link>
-            <Link to={'https://drive.google.com/file/d/1uQvzrszUkQ2QRxbsKWovHqa9NKxBI3Bv/view?usp=drive_link'} className="w-full p-4 text-slate-700 hover:text-primary-accent bg-white rounded-lg">
+            <Link
+              to={
+                "https://drive.google.com/file/d/1uQvzrszUkQ2QRxbsKWovHqa9NKxBI3Bv/view?usp=drive_link"
+              }
+              className="w-full p-4 text-slate-700 hover:text-primary-accent bg-white rounded-lg"
+            >
               <i className="fi fi-rr-file-pdf inline-block mr-1 translate-y-0.5"></i>
               Code Electoral du Burundi_2019.pdf
             </Link>
-            <Link to={'https://drive.google.com/file/d/1o_PinRrRZIgm-Vfbz26W8DkwUANhRV_P/view?usp=drive_link'} className="w-full p-4 text-slate-700 hover:text-primary-accent bg-white rounded-lg">
+            <Link
+              to={
+                "https://drive.google.com/file/d/1o_PinRrRZIgm-Vfbz26W8DkwUANhRV_P/view?usp=drive_link"
+              }
+              className="w-full p-4 text-slate-700 hover:text-primary-accent bg-white rounded-lg"
+            >
               <i className="fi fi-rr-file-pdf inline-block mr-1 translate-y-0.5"></i>
               CENI_Dépôt des insignes des Partis Politiques_Nov 2024.pdf
             </Link>
-            <Link to={'https://drive.google.com/file/d/1FhLoHqiMoHIzCsgV6dq3U7Wq9Uv7IB1G/view?usp=drive_link'} className="w-full p-4 text-slate-700 hover:text-primary-accent bg-white rounded-lg">
+            <Link
+              to={
+                "https://drive.google.com/file/d/1FhLoHqiMoHIzCsgV6dq3U7Wq9Uv7IB1G/view?usp=drive_link"
+              }
+              className="w-full p-4 text-slate-700 hover:text-primary-accent bg-white rounded-lg"
+            >
               <i className="fi fi-rr-file-pdf inline-block mr-1 translate-y-0.5"></i>
               CENI_Arretée sur la présentation des candidatures_30 Oct 2024.pdf
             </Link>
