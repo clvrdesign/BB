@@ -31,20 +31,20 @@ function Publications() {
   return (
     <>
       <Navbar />
-      <div className="w-full flex gap-4 bg-slate-100 border border-red-500">
+      <div className="w-full flex gap-4 bg-slate-100">
         {isVisible && <Sidebar />}
-        <div className="w-full max-w-[1400px] m-auto flex flex-col lg:pr-3 pr-0 border border-gray-500">
+        <div className="w-full max-w-[1400px] m-auto flex flex-col lg:pr-3 pr-0">
           <div className="w-full h-60 bg-white mt-0 mb-4 lg:rounded-lg rounded-none overflow-hidden">
             <img
               className="w-full h-full object-cover"
-              src="https://lutheranworld.org/sites/default/files/2024-02/burundi-communities-group.jpg"
+              src="https://suetravels.com/wp-content/uploads/2022/08/Burundi-0330-scaled.jpg"
               alt="Community Group"
             />
           </div>
-          <h1 className="w-full text-primary-accent text-[2rem] my-4 font-bold">
-            Publications récents
+          <h1 className="w-full text-primary-accent text-[2rem] my-4 px-3 lg:px-0 font-bold">
+            Publications
           </h1>
-          <div className="w-full grid grid-cols-1 gap-4 lg:pl-0 pl-3 pb-10 border border-sky-500">
+          <div className="w-full grid grid-cols-1 gap-4 lg:pl-0 pl-3 pb-10">
             <Link
               to={
                 "https://drive.google.com/file/d/1B5NQWeVF3yI4rWVK3XuZX1S4_54W0SGN/view?usp=drive_link"
