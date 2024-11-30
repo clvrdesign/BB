@@ -54,21 +54,24 @@ function Fondateur() {
                         <section className="bg-white p-10 rounded-xl">
                             <h2 className="font-bold text-gray-700 text-xl mb-3">Information Personelle</h2>
                             <p className="text-sm">
-                                Valentin
-                                Kaze Kavakure
-                                Né le 09 juin 1979
-                                Quartier 3, Ngagara
-                                Bujumbura-Maire
-                                Burundi
-                                Marié
-                                Père de 4 enfants
+                                Valentin Kaze Kavakure <br />
+                                Né le 09 juin 1979 <br />
+                                Quartier 3, Ngagara <br />
+                                Bujumbura-Maire Burundi<br />
+                                Marié Père de 4 enfants <br />
                                 Entrepreneur & Fonctionnaire
                             </p>
 
                             <h2 className="font-bold text-gray-700 text-xl my-3">Vie Politique</h2>
                             <ol className="text-sm">
-                                <li> Candidat Député aux élections parlementaires de 2010</li>
-                                <li>Candidat Président aux élections présidentielles de 2020</li>
+                                <li>
+                                    Candidat Député <br />
+                                    aux élections parlementaires de 2010
+                                    </li>
+                                <li>
+                                    Candidat Président <br />
+                                    aux élections présidentielles de 2020
+                                    </li>
                             </ol>
 
                             <h2 className="font-bold text-gray-700 text-xl my-3">Vie Associative</h2>
