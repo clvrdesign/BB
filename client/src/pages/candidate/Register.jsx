@@ -1,8 +1,15 @@
 // import { useState } from 'react';
 import Button from "../../components/Button";
 import { Link } from 'react-router-dom'
+import School from "../../components/School"
+import { useState } from "react";
 
 const AddMem = () => {
+  const [school, setSchool] = useState(School)
+  const addSchool = () =>{
+    const newSchool = (school)
+    setSchool(newSchool)
+  }
   // const [formValues, setFormValues] = useState({
   //   lastName: '',
   //   firstName: '',
@@ -58,7 +65,7 @@ const AddMem = () => {
           <h1 className='text-[2rem] font-bold text-gray-600 mb-4'>Devenir Candidat</h1>
           <form onSubmit='' className="w-full flex flex-col gap-3">
           <fieldset>
-              <div className="grid sm:grid-cols-3 grid-cols-1 gap-2">
+              <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
                 <input
                   type="text"
                   id=''
@@ -71,55 +78,13 @@ const AddMem = () => {
                   placeholder="Nom d&apos;utilisateur"
                   className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none `}
                 />
-                <input
-                  type="password"
-                  id='confirmPassword'
-                  placeholder="Password"
-                  className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none `}
-                />
-
+                
               </div>
 
             </fieldset>
+            
             <fieldset>
-              <legend className="text-lg font-bold text-gray-600 mb-2">1. Type de volontariat</legend>
-
-              <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
-                <div className='flex gap-1'>
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Enregistrer membres</label>
-                </div>
-
-                <div className='flex items-center gap-1'>
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Administration</label>
-                </div>
-                <div className='flex gap-1'>
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Communication</label>
-                </div>
-                <div className='flex gap-1'>
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Informatique</label>
-                </div>
-                <div className='flex gap-1'>
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Gestion et logistique</label>
-                </div>
-                <div className='flex gap-1'>
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Compagne et mobilisation</label>
-                </div>
-                <div className='flex gap-1'>
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Mandataire/Observateur politique</label>
-                </div>
-              </div>
-
-            </fieldset>
-
-            <fieldset>
-              <legend className="text-lg font-bold text-gray-600 mb-2">2. Candidats aux éléctions</legend>
+              <legend className="text-lg font-bold text-gray-600 mb-2">1. Candidats aux Eléctions</legend>
 
               <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
                 <div className='flex items-center gap-1'>
@@ -129,19 +94,19 @@ const AddMem = () => {
 
                 <div className='flex items-center gap-1'>
                   <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Candidat conseil communal</label>
+                  <label htmlFor="add" className='text-gray-600 text-sm'>Candidat Conseiller Communal</label>
                 </div>
                 <div className='flex items-center gap-1'>
                   <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Candidat Sénataire</label>
+                  <label htmlFor="add" className='text-gray-600 text-sm'>Candidat Sénateur</label>
                 </div>
                 <div className='flex items-center gap-1'>
                   <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Candidat Conseil collinaire</label>
+                  <label htmlFor="add" className='text-gray-600 text-sm'>Candidat Conseiller Collinaire</label>
                 </div>
                 <div className='flex items-center gap-1'>
                   <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Candidat chef de quartier</label>
+                  <label htmlFor="add" className='text-gray-600 text-sm'>Candidat Chef de Quartier</label>
                 </div>
 
               </div>
@@ -149,7 +114,7 @@ const AddMem = () => {
             </fieldset>
 
             <fieldset>
-              <legend className="text-lg font-bold text-gray-600 mb-2">3. Résidence</legend>
+              <legend className="text-lg font-bold text-gray-600 mb-2">2. Résidence</legend>
 
               <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
                 <input
@@ -170,35 +135,28 @@ const AddMem = () => {
             </fieldset>
 
             <fieldset>
-              <legend className="text-lg font-bold text-gray-600 mb-2">4. Education</legend>
+              <legend className="text-lg font-bold text-gray-600 mb-2">
+                4. Education
+              </legend>
 
-              <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
-                <input
-                  type="text"
-                  id='confirmPassword'
-                  placeholder="Mukaza, Bujumbura"
-                  className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none `}
-                />
-                <input
-                  type="text"
-                  id='confirmPassword'
-                  placeholder="Mukaza, Bujumbura"
-                  className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none `}
-                />
+              {school &&
+                school
+              }
 
-              </div>
-
+              <span onClick={addSchool} className="text-white md:min-w-32 h-10 flex items-center cursor-pointer justify-center md:w-fit w-full mt-3 bg-slate-500 px-10 rounded-md">
+                Add school
+              </span>
             </fieldset>
 
             <fieldset className='w-full'>
-              <legend className="text-lg font-bold text-gray-600 mb-2">5.Expérience professionelle</legend>
+              <legend className="text-lg font-bold text-gray-600 mb-2">4.Expérience professionelle</legend>
               <textarea className='w-full h-40 bg-gray-100 text-sm px-4 py-3 rounded-md focus:border-primary-color border outline-none' placeholder="Max: 500 caractères" name="" id=""></textarea>
 
 
             </fieldset>
 
             <fieldset>
-              <legend className="text-lg font-bold text-gray-600 mb-2">6. Appartenance ethnique</legend>
+              <legend className="text-lg font-bold text-gray-600 mb-2">5. Appartenance ethnique</legend>
 
               <div className="grid sm:grid-cols-3 grid-cols-1 gap-2">
                 <div className='flex gap-1'>
@@ -224,19 +182,23 @@ const AddMem = () => {
             </fieldset>
 
             <fieldset className='w-full'>
-              <legend className="text-lg font-bold text-gray-600 mb-2">7. Passé politique</legend>
+              <legend className="text-lg font-bold text-gray-600 mb-2">6. Passé politique</legend>
               <textarea className='w-full h-40 bg-gray-100 text-sm px-4 py-3 rounded-md focus:border-primary-color border outline-none' placeholder="Max: 500 caractères" name="" id=""></textarea>
 
 
             </fieldset>
 
             <fieldset className='w-full'>
-              <legend className="text-lg font-bold text-gray-600 mb-2">8. Téléchargements</legend>
+              <legend className="text-lg font-bold text-gray-600 mb-2">7. Téléchargements</legend>
               <label className='w-full flex justify-center items-center gap-2 text-sm text-gray-600 py-10 rounded-xl border-dashed border' htmlFor="cardOne"><i className="fi fi-rr-add-image translate-y-0.5"></i> Identité 1</label>
               <input className='hidden' id='cardOne' type="file" />
               <label className='w-full flex justify-center items-center gap-2 text-sm text-gray-600 py-10 my-5 rounded-xl border-dashed border' htmlFor="cardTwo"><i className="fi fi-rr-add-image translate-y-0.5"></i> Identité 2</label>
               <input className='hidden' id='cardTwo' type="file" />
               <label className='w-full flex justify-center items-center gap-2 text-sm text-gray-600 py-10 rounded-xl border-dashed border' htmlFor="photo"><i className="fi fi-rr-add-image translate-y-0.5"></i> Photo passport</label>
+              <input className='hidden' id='photo' type="file" />
+              <label className='w-full flex justify-center items-center gap-2 text-sm text-gray-600 py-10 mt-5 rounded-xl border-dashed border' htmlFor="photo"><i className="fi fi-rr-add-image translate-y-0.5"></i> Bulletin d&apos;Inscription CENI</label>
+              <input className='hidden' id='photo' type="file" />
+              <label className='w-full flex justify-center items-center gap-2 text-sm text-gray-600 py-10 mt-5 rounded-xl border-dashed border' htmlFor="photo"><i className="fi fi-rr-add-image translate-y-0.5"></i> Attestation de Résidence</label>
               <input className='hidden' id='photo' type="file" />
             </fieldset>
 
