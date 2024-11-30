@@ -10,7 +10,7 @@ function Sidebar() {
       <ul className="w-full text-slate-500 sm:rounded-3xl overflow-hidden">
         <li className='flex items-center hover:text-primary-color px-4 rounded-md'>
           <i className="fi fi-rr-user translate-y-0.5"></i>
-          <Link className='w-full flex justify-between p-4' to='/'>
+          <Link className='w-full flex justify-between p-4' to='/fondateur'>
             Fondateur
             <i className="bi bi-chevron-right"></i>
           </Link>

@@ -12,6 +12,8 @@ import Progress from './pages/Progress';
 import Sidebar from './pages/Sidebar';
 import ErrorPage from './pages/error/Error404';
 import Publications from './pages/Publications';
+import Fondateur from './pages/Fondateur';
+
 
 function App() {
 
@@ -30,6 +32,7 @@ function App() {
         <Route path="/progress" element={<Progress />} />
         <Route path="/sidebar" element={<Sidebar />} />
         <Route path="/publications" element={<Publications />} />
+        <Route path="/fondateur" element={<Fondateur />} />
         <Route path="/*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
