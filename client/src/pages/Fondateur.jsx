@@ -67,17 +67,22 @@ function Fondateur() {
                                 <li>
                                     Candidat Député <br />
                                     aux élections parlementaires de 2010
-                                    </li>
+                                </li>
                                 <li>
                                     Candidat Président <br />
                                     aux élections présidentielles de 2020
-                                    </li>
+                                </li>
                             </ol>
 
                             <h2 className="font-bold text-gray-700 text-xl my-3">Vie Associative</h2>
                             <ol className="text-sm">
-                                <li> Représentant Légal de l’ABSL A BETTER BURUNDI - BURUNDI BWIZA depuis 2019</li>
-                                <li> Président équipe de basketball MUTANGA UNITED depuis 2012 </li>
+                                <li>
+                                    Représentant Légal de l’ABSL <br />
+                                    A BETTER BURUNDI - BURUNDI BWIZA depuis 2019
+                                </li>
+                                <li> Président équipe de basketball <br />
+                                    MUTANGA UNITED depuis 2012
+                                </li>
                             </ol>
 
                         </section>
@@ -114,7 +119,7 @@ function Fondateur() {
                                 <li>2021-Présent: Représentant Pays, ABS Belgique</li>
                             </ul>
                         </section>
-                        
+
                     </div>
                 </div>
             </div>
