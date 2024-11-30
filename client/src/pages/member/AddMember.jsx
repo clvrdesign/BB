@@ -55,7 +55,7 @@ const AddMem = () => {
               <Link to='/' className='pl-1 text-primary-accent'>Accueil</Link>
             </small>
           </div>
-          <h1 className='text-[2rem] font-bold text-gray-600 mb-4'>Devenir Membre Actif</h1>
+          <h1 className='text-[2rem] font-bold text-gray-600 mb-4'>Devenir Membre</h1>
           <form onSubmit='' className="w-full flex flex-col gap-3">
           <fieldset>
               <div className="grid sm:grid-cols-3 grid-cols-1 gap-2">
