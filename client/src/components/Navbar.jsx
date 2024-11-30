@@ -212,7 +212,7 @@ function Navbar({ onClick }) {
                   <li>
                     <Link
                       className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-100 hover:text-primary-accent rounded-full"
-                      to="/member/register"
+                      to="/member-register"
                     >
                       <i className="fi fi-rr-users translate-y-0.5"></i> Devenir membre
                     </Link>
@@ -221,7 +221,7 @@ function Navbar({ onClick }) {
                   <li>
                     <Link
                       className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-200 hover:text-primary-accent rounded-full"
-                      to="/candidate/register"
+                      to="/candidate-register"
                     >
                       <i className="fi fi-rr-user-add translate-y-0.5"></i> Devenir candidat
                     </Link>
@@ -229,7 +229,7 @@ function Navbar({ onClick }) {
                   <li>
                     <Link
                       className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-100 hover:text-primary-accent rounded-full"
-                      to="/volunteer/register"
+                      to="/volunteer-register"
                     >
                       <i className="fi fi-rr-user-add translate-y-0.5"></i> Devenir volontaire
                     </Link>
@@ -245,7 +245,7 @@ function Navbar({ onClick }) {
                   <li>
                     <Link
                       className="flex gap-2 py-2 px-5 ease-out delay-75 hover:bg-slate-100 hover:text-primary-accent rounded-full"
-                      to="/"
+                      to="/parrain-register"
                     >
                       <i className="fi fi-rr-user-add translate-y-0.5"></i> Parrainer membre
                     </Link>

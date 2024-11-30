@@ -5,6 +5,7 @@ import RegisterFan from './pages/register/Register';
 import RegisterMember from './pages/member/Register';
 import RegisterCandidate from './pages/candidate/Register';
 import RegisterVolunteer from './pages/volunteer/Register';
+import RegisterParrain from './pages/parrain/Register';
 import Post from './pages/posts/Post';
 import Profile from './pages/profile/Profile';
 import Progress from './pages/Progress';
@@ -20,9 +21,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<RegisterFan />} />
-        <Route path="/member/register" element={<RegisterMember />} />
-        <Route path="/volunteer/register" element={<RegisterVolunteer />} />
-        <Route path="/candidate/register" element={<RegisterCandidate />} />
+        <Route path="/member-register" element={<RegisterMember />} />
+        <Route path="/volunteer-register" element={<RegisterVolunteer />} />
+        <Route path="/candidate-register" element={<RegisterCandidate />} />
+        <Route path="/parrain-register" element={<RegisterParrain />} />
         <Route path="/post" element={<Post />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/progress" element={<Progress />} />

@@ -21,7 +21,7 @@ const Experience = () => {
                     id=""
                     className={`h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none `}
                   >
-                    <option value="" selected disabled>Sélectionner la catégorie</option>  
+                    <option value="" selected disabled>Sélectionner Catégorie</option>  
                     <option value="">Poste par décrêt</option>
                     <option value="">Directeur Général/Dir</option>
                     <option value="">Cadre de Direction</option>
