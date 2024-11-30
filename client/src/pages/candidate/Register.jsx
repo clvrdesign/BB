@@ -228,7 +228,7 @@ const AddMem = () => {
                 </small>
               </label>
             </div>
-            <Button className="md:w-fit w-full bg-primary-color px-10">Devenir Membre</Button>
+            <Button className="md:w-fit w-full bg-primary-color px-10">Devenir Candidat</Button>
           </form>
         </div>
       </div>

@@ -263,7 +263,7 @@ const AddMem = () => {
               </label>
             </div>
             <Button className="md:w-fit w-full bg-primary-color px-10">
-              Devenir Membre
+              Devenir Volontaire
             </Button>
           </form>
         </div>
