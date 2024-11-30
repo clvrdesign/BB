@@ -2,10 +2,16 @@
 import Button from "../../components/Button";
 import { Link } from 'react-router-dom'
 import School from "../../components/School"
+import Experience from "../../components/Experience"
 import { useState } from "react";
 
 const AddMem = () => {
   const [school, setSchool] = useState(School)
+  const [experience, setExperience] = useState(Experience)
+  const addExperience = () =>{
+    const newExperience = (experience)
+    setExperience(newExperience)
+  }
   const addSchool = () =>{
     const newSchool = (school)
     setSchool(newSchool)
@@ -144,14 +150,19 @@ const AddMem = () => {
               }
 
               <span onClick={addSchool} className="text-white md:min-w-32 h-10 flex items-center cursor-pointer justify-center md:w-fit w-full mt-3 bg-slate-500 px-10 rounded-md">
-                Add school
+                Ajouter Etablissement
               </span>
             </fieldset>
 
             <fieldset className='w-full'>
               <legend className="text-lg font-bold text-gray-600 mb-2">4.Expérience professionelle</legend>
-              <textarea className='w-full h-40 bg-gray-100 text-sm px-4 py-3 rounded-md focus:border-primary-color border outline-none' placeholder="Max: 500 caractères" name="" id=""></textarea>
+              {experience &&
+                experience
+              }
 
+              <span onClick={addExperience} className="text-white md:min-w-32 h-10 flex items-center cursor-pointer justify-center md:w-fit w-full mt-3 bg-slate-500 px-10 rounded-md">
+                Ajouter Expérience
+              </span>
 
             </fieldset>
 
