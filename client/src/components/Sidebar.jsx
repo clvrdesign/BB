@@ -17,14 +17,14 @@ function Sidebar() {
         </li>
         <li className='flex items-center hover:text-primary-color px-4 rounded-md'>
           <i className="fi fi-rr-eye translate-y-0.5"></i>
-          <Link className='w-full flex justify-between p-4' to='/'>
+          <Link className='w-full flex justify-between p-4' to='/vision'>
             Vision
             <i className="bi bi-chevron-right"></i>
           </Link>
         </li>
         <li className='flex items-center hover:text-primary-color px-4 rounded-md'>
           <i className="fi fi-rr-calendar translate-y-0.5"></i>
-          <Link className='w-full flex justify-between p-4' to='/'>
+          <Link className='w-full flex justify-between p-4' to='/calendrier'>
             Calendar
             <i className="bi bi-chevron-right"></i>
           </Link>

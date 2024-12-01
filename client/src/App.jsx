@@ -12,7 +12,9 @@ import Progress from './pages/Progress';
 import Sidebar from './pages/Sidebar';
 import ErrorPage from './pages/error/Error404';
 import Publications from './pages/Publications';
+import Calendrier from './pages/Calendrier';
 import Fondateur from './pages/Fondateur';
+import Vision from './pages/Vision';
 
 
 function App() {
@@ -32,7 +34,9 @@ function App() {
         <Route path="/progress" element={<Progress />} />
         <Route path="/sidebar" element={<Sidebar />} />
         <Route path="/publications" element={<Publications />} />
+        <Route path="/calendrier" element={<Calendrier />} />
         <Route path="/fondateur" element={<Fondateur />} />
+        <Route path="/vision" element={<Vision />} />
         <Route path="/*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
