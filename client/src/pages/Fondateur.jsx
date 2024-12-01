@@ -53,7 +53,7 @@ function Fondateur() {
                         />
                         <section className="bg-white p-10 rounded-xl">
                             <h2 className="font-bold text-gray-700 text-xl mb-3">Information Personelle</h2>
-                            <p className="text-sm">
+                            <p className="text-sm text-slate-600">
                                 Valentin Kaze Kavakure <br />
                                 Né le 09 juin 1979 <br />
                                 Quartier 3, Ngagara <br />
@@ -63,7 +63,7 @@ function Fondateur() {
                             </p>
 
                             <h2 className="font-bold text-gray-700 text-xl my-3">Vie Politique</h2>
-                            <ol className="text-sm">
+                            <ol className="text-sm text-slate-600">
                                 <li>
                                     Candidat Député <br />
                                     aux élections parlementaires de 2010
@@ -75,7 +75,7 @@ function Fondateur() {
                             </ol>
 
                             <h2 className="font-bold text-gray-700 text-xl my-3">Vie Associative</h2>
-                            <ol className="text-sm">
+                            <ol className="text-sm text-slate-600">
                                 <li>
                                     Représentant Légal de l’ABSL <br />
                                     A BETTER BURUNDI - BURUNDI BWIZA depuis 2019
@@ -88,7 +88,7 @@ function Fondateur() {
                         </section>
                         <section className="bg-white p-10 rounded-xl">
                             <h2 className="font-bold text-gray-700 text-xl mb-3">Éducation/Formation</h2>
-                            <ul className="text-sm">
+                            <ul className="text-sm text-slate-600">
                                 <li>1983-1984: École Maternelle, Ngagara Q3</li>
                                 <li>1984-1987: École Primaire, Ngagara Q3</li>
                                 <li>1987-1989: Primaire Kennedy Lyceum, NY-USA</li>
@@ -105,7 +105,7 @@ function Fondateur() {
 
                         <section className="bg-white p-10 rounded-xl">
                             <h2 className="font-bold text-gray-700 text-xl mb-3">Expérience Professionnelle</h2>
-                            <ul className="text-sm">
+                            <ul className="text-sm text-slate-600">
                                 <li>2001-2004: DG Akeza Entertainments</li>
                                 <li>Reportage et Montage Photo/Vidéo</li>
                                 <li>2004-2006: ONUB - Ressources Humaines</li>

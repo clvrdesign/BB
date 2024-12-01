@@ -108,6 +108,24 @@ function Publications() {
               <i className="fi fi-rr-file-pdf inline-block mr-1 translate-y-0.5"></i>
               CENI_Arretée sur la présentation des candidatures_30 Oct 2024.pdf
             </Link>
+            <Link
+              to={
+                "https://drive.google.com/file/d/1MRc-RuDjfnctGHn6E4WMKPHtUylZ6Usg/view?usp=drive_link"
+              }
+              className="w-full p-4 text-slate-700 hover:text-primary-accent bg-white rounded-lg"
+            >
+              <i className="fi fi-rr-file-pdf inline-block mr-1 translate-y-0.5"></i>
+              Calendrier-Electoral-Echéance-2025-Fin mandat-envoye.pdf
+            </Link>
+            <Link
+              to={
+                "https://drive.google.com/file/d/1PIiRgNnZ1iV-lliPKOCfv6GthCL-0veb/view?usp=drive_link"
+              }
+              className="w-full p-4 text-slate-700 hover:text-primary-accent bg-white rounded-lg"
+            >
+              <i className="fi fi-rr-file-pdf inline-block mr-1 translate-y-0.5"></i>
+              Transmission et Nomination SG FPN IMBONEZA_26 nov 2024.pdf
+            </Link>
           </div>
         </div>
       </div>
