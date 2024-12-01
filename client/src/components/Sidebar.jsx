@@ -5,7 +5,7 @@ import Button from '../components/Button'
 
 function Sidebar() {
   return (
-    <div className='sticky top-0 h-screen  overflow-y-auto'>
+    <div className='sticky top-0 min-h-screen  overflow-y-auto'>
     <div className='min-w-[315px] bg-white  min-h-screen px-3 py-5'>
       <ul className="w-full text-slate-500 sm:rounded-3xl overflow-hidden">
         <li className='flex items-center hover:text-primary-color px-4 rounded-md'>
