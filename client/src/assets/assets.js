@@ -6,5 +6,5 @@ import avatar from './avatar.svg'
 import profile from './profile.jpg'
 import val from './val.jpg'
 import cal from './cal.png'
-import vision from './vision.png'
+import vision from './vis.png'
 export const assets = { logo, imgFemale, imgMale, profile, val, cal, vision, avatar } 
