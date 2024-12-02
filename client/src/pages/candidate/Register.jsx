@@ -6,16 +6,12 @@ import Experience from "../../components/Experience"
 import { useState } from "react";
 
 const AddMem = () => {
-  const [school, setSchool] = useState(School)
   const [experience, setExperience] = useState(Experience)
   const addExperience = () =>{
     const newExperience = (experience)
     setExperience(newExperience)
   }
-  const addSchool = () =>{
-    const newSchool = (school)
-    setSchool(newSchool)
-  }
+  
   // const [formValues, setFormValues] = useState({
   //   lastName: '',
   //   firstName: '',
@@ -145,13 +141,7 @@ const AddMem = () => {
                 4. Education
               </legend>
 
-              {school &&
-                school
-              }
-
-              <span onClick={addSchool} className="text-white md:min-w-32 h-10 flex items-center cursor-pointer justify-center md:w-fit w-full mt-3 bg-slate-500 px-10 rounded-md">
-                Ajouter Etablissement
-              </span>
+              <School/>
             </fieldset>
 
             <fieldset className='w-full'>

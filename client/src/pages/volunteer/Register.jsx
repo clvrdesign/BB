@@ -22,47 +22,6 @@ const AddMem = () => {
     const newPolitic = (politic)
     setPolitic(newPolitic)
   }
-  // const [formValues, setFormValues] = useState({
-  //   lastName: '',
-  //   firstName: '',
-  //   email: '',
-  //   phoneSMS: '',
-  //   phoneWhatsApp: '',
-  //   year: ''
-  // });
-  // const [errors, setErrors] = useState({});
-
-  // const validateForm = () => {
-  //   const newErrors = {};
-  //   if (!formValues.lastName) newErrors.lastName = 'Le nom est requis';
-  //   if (!formValues.firstName) newErrors.firstName = 'Le prénom est requis';
-  //   if (!formValues.email) newErrors.email = 'L\'Email est requis';
-  //   if (!/\S+@\S+\.\S+/.test(formValues.email)) newErrors.email = 'L\'email est invalide';
-  //   if (!formValues.phoneSMS) newErrors.phoneSMS = 'Le numéro de téléphone est requis';
-  //   if (!/^[0-9]{8}$/.test(formValues.phoneSMS)) newErrors.phoneSMS = 'Phone number must be 8 digits';
-  //   if (!formValues.year) newErrors.year = 'Year of birth is required';
-  //   return newErrors;
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const validationErrors = validateForm();
-  //   if (Object.keys(validationErrors).length === 0) {
-  //     console.log('Form submitted', formValues);
-  //   } else {
-  //     setErrors(validationErrors);
-  //   }
-  // };
-
-  // const handleInputChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormValues({
-  //     ...formValues,
-  //     [name]: value
-  //   });
-  // };
-
-  // handleInputChange()
 
   return (
     <div className="w-full min-h-screen bg-slate-100 md:py-5 py-0 md:px-3 px-0 flex md:flex-row flex-col items-center justify-center">

@@ -1,87 +1,107 @@
-const Experience = () => {
+import Button from "../components/Button";
+import { useState } from "react";
+
+const School = () => {
+  const [school, setSchool] = useState([{}]); // Initialize with an empty object
   const currentYear = new Date().getFullYear();
   const years = Array.from({ length: 51 }, (_, i) => currentYear - i);
 
-  return (
-    <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
-      <fieldset>
-        <legend className="text-sm text-slate-600">Employeur</legend>
-        <input
-          type="text"
-          id="confirmPassword"
-          placeholder="Employeur"
-          className={`h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none `}
-        />
-      </fieldset>
-      <fieldset>
-        <legend className="text-sm text-slate-600">Catégorie</legend>
-        <select
-          name=""
-          id=""
-          className={`h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none `}
-        >
-          <option value="" selected disabled>
-            Sélectionner Catégorie
-          </option>
-          <option value="">Poste par décrêt</option>
-          <option value="">Directeur Général/Dir</option>
-          <option value="">Cadre de Direction</option>
-          <option value="">Cadre d&apos;Appui</option>
-          <option value="">Agent</option>
-          <option value="">Contrat à court terme</option>
-          <option value="">Journalier</option>
-        </select>
-      </fieldset>
+  const addSchool = (e) => {
+    e.preventDefault();
+    setSchool((prev) => [...prev, {}]); // Add a new school entry
+  };
 
-      <fieldset>
-        <legend className="text-sm text-slate-600">Poste occupé</legend>
-        <input
-          type="text"
-          id="confirmPassword"
-          placeholder="Poste occupé"
-          className={`h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none `}
-        />
-      </fieldset>
-      <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
-        <fieldset>
-          <legend className="text-sm text-slate-600">Année de début</legend>
-          <select
-            name=""
-            id=""
-            className={`h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none `}
+  const removeSchool = (index) => {
+    setSchool((prev) => prev.filter((_, i) => i !== index)); // Remove school by index
+  };
+
+  return (
+    <>
+      {school.map((_, index) => (
+        <div key={index} className="border p-4 rounded-md mb-4 relative">
+          <button
+            onClick={() => removeSchool(index)}
+            className="absolute top-2 right-2 text-primary-accent text-sm hover:underline"
           >
-            <option value="" selected disabled>
-              Séléctioner l&apos;année de début
-            </option>
-            {years.map((year) => (
-              <>
-                <option key={year} value={year}>
-                  {year}
+            Retire l&apos;Expérience
+          </button>
+          <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
+            <fieldset>
+              <legend className="text-sm text-slate-600">Employeur</legend>
+              <input
+                type="text"
+                placeholder="Employeur"
+                className="h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none"
+              />
+            </fieldset>
+            <fieldset>
+              <legend className="text-sm text-slate-600">Catégorie</legend>
+              <select
+                name={`category-${index}`}
+                id={`category-${index}`}
+                className="h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none"
+              >
+                <option value="" disabled selected>
+                  Sélectionner Catégorie
                 </option>
-              </>
-            ))}
-          </select>
-        </fieldset>
-        <fieldset>
-          <legend className="text-sm text-slate-600">Année de fin</legend>
-          <select
-            name=""
-            id=""
-            className={`h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none `}
-          >
-            <option value="" selected disabled>
-              Séléctioner l&apos;année de fin
-            </option>
-            {years.map((year) => (
-              <option key={year} value={year}>
-                {year}
-              </option>
-            ))}
-          </select>
-        </fieldset>
-      </div>
-    </div>
+                {[
+                  "Poste par décret",
+                  "Directeur Général/Dir",
+                  "Cadre de Direction",
+                  "Cadre d'Appui",
+                  "Agent",
+                  "Contrat à court terme",
+                  "Journalier",
+                ].map((category) => (
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
+                ))}
+              </select>
+            </fieldset>
+
+            <fieldset>
+              <legend className="text-sm text-slate-600">
+                Poste occupé
+              </legend>
+              <input
+                type="text"
+                placeholder="Domaine d'Etude"
+                className="h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none"
+              />
+            </fieldset>
+            <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
+              {["Année de début", "Année de fin"].map((label, idx) => (
+                <fieldset key={idx}>
+                  <legend className="text-sm text-slate-600">{label}</legend>
+                  <select
+                    name={`${label.toLowerCase().replace(/ /g, "-")}-${index}`}
+                    id={`${label.toLowerCase().replace(/ /g, "-")}-${index}`}
+                    className="h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none"
+                  >
+                    <option value="" disabled selected>
+                      Séléctioner l&apos;année
+                    </option>
+                    {years.map((year) => (
+                      <option key={year} value={year}>
+                        {year}
+                      </option>
+                    ))}
+                  </select>
+                </fieldset>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+      <Button
+        onClick={addSchool}
+        className="text-white md:min-w-32 h-10 flex items-center cursor-pointer justify-center md:w-fit w-full mt-3 bg-slate-500 px-10 rounded-md"
+      >
+        Ajouter Etablissement
+      </Button>
+    </>
   );
 };
 
-export default Experience;
+export default School;
