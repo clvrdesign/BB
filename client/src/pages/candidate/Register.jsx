@@ -3,57 +3,9 @@ import Button from "../../components/Button";
 import { Link } from 'react-router-dom'
 import School from "../../components/School"
 import Experience from "../../components/Experience"
-import { useState } from "react";
+import Politic from "../../components/Politic";
 
 const AddMem = () => {
-  const [experience, setExperience] = useState(Experience)
-  const addExperience = () =>{
-    const newExperience = (experience)
-    setExperience(newExperience)
-  }
-  
-  // const [formValues, setFormValues] = useState({
-  //   lastName: '',
-  //   firstName: '',
-  //   email: '',
-  //   phoneSMS: '',
-  //   phoneWhatsApp: '',
-  //   year: ''
-  // });
-  // const [errors, setErrors] = useState({});
-
-
-  // const validateForm = () => {
-  //   const newErrors = {};
-  //   if (!formValues.lastName) newErrors.lastName = 'Le nom est requis';
-  //   if (!formValues.firstName) newErrors.firstName = 'Le prénom est requis';
-  //   if (!formValues.email) newErrors.email = 'L\'Email est requis';
-  //   if (!/\S+@\S+\.\S+/.test(formValues.email)) newErrors.email = 'L\'email est invalide';
-  //   if (!formValues.phoneSMS) newErrors.phoneSMS = 'Le numéro de téléphone est requis';
-  //   if (!/^[0-9]{8}$/.test(formValues.phoneSMS)) newErrors.phoneSMS = 'Phone number must be 8 digits';
-  //   if (!formValues.year) newErrors.year = 'Year of birth is required';
-  //   return newErrors;
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const validationErrors = validateForm();
-  //   if (Object.keys(validationErrors).length === 0) {
-  //     console.log('Form submitted', formValues);
-  //   } else {
-  //     setErrors(validationErrors);
-  //   }
-  // };
-
-  // const handleInputChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormValues({
-  //     ...formValues,
-  //     [name]: value
-  //   });
-  // };
-
-  // handleInputChange()
 
   return (
     <div className="w-full min-h-screen bg-slate-100 md:py-5 py-0 md:px-3 px-0 flex md:flex-row flex-col items-center justify-center">
@@ -146,14 +98,7 @@ const AddMem = () => {
 
             <fieldset className='w-full'>
               <legend className="text-lg font-bold text-gray-600 mb-2">4.Expérience professionelle</legend>
-              {experience &&
-                experience
-              }
-
-              <span onClick={addExperience} className="text-white md:min-w-32 h-10 flex items-center cursor-pointer justify-center md:w-fit w-full mt-3 bg-slate-500 px-10 rounded-md">
-                Ajouter Expérience
-              </span>
-
+              <Experience/>
             </fieldset>
 
             <fieldset>
@@ -184,9 +129,7 @@ const AddMem = () => {
 
             <fieldset className='w-full'>
               <legend className="text-lg font-bold text-gray-600 mb-2">6. Passé politique</legend>
-              <textarea className='w-full h-40 bg-gray-100 text-sm px-4 py-3 rounded-md focus:border-primary-color border outline-none' placeholder="Max: 500 caractères" name="" id=""></textarea>
-
-
+              <Politic/>
             </fieldset>
 
             <fieldset className='w-full'>

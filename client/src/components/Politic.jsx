@@ -1,27 +1,28 @@
 import { useState } from "react";
 
-const Politique = () => {
-  const [responsibilities, setResponsibilities] = useState([{}]); // Manage responsibilities dynamically
+const Politic = () => {
+  const [politic, setPolitic] = useState([{}]);
   const currentYear = new Date().getFullYear();
   const years = Array.from({ length: 51 }, (_, i) => currentYear - i);
 
-  const addResponsibility = () => {
-    setResponsibilities((prev) => [...prev, {}]); // Add a new responsibility entry
+  const addPolitic = (e) => {
+    e.preventDefault()
+    setPolitic((prev) => [...prev, {}]);
   };
 
-  const removeResponsibility = (index) => {
-    setResponsibilities((prev) => prev.filter((_, i) => i !== index)); // Remove a responsibility entry
+  const removePolitic = (index) => {
+    setPolitic((prev) => prev.filter((_, i) => i !== index));
   };
 
   return (
     <>
-      {responsibilities.map((_, index) => (
+      {politic.map((_, index) => (
         <div key={index} className="border p-4 rounded-md mb-4 relative">
           <button
-            onClick={() => removeResponsibility(index)}
-            className="absolute top-2 right-2 text-red-500 text-sm hover:underline"
+            onClick={() => removePolitic(index)}
+            className="absolute top-2 right-2 text-primary-accent text-sm hover:underline"
           >
-            Remove
+            Retire le passé politique
           </button>
           <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
             <fieldset>
@@ -88,13 +89,13 @@ const Politique = () => {
         </div>
       ))}
       <button
-        onClick={addResponsibility}
+        onClick={addPolitic}
         className="text-white h-10 flex items-center cursor-pointer justify-center mt-3 bg-slate-500 px-10 rounded-md"
       >
-        Ajouter Responsabilité
+        Ajouter le Passé politique
       </button>
     </>
   );
 };
 
-export default Politique;
+export default Politic;

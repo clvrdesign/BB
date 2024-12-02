@@ -1,26 +1,26 @@
 import Button from "../components/Button";
 import { useState } from "react";
 
-const School = () => {
-  const [school, setSchool] = useState([{}]); // Initialize with an empty object
+const Experience = () => {
+  const [experience, setExperience] = useState([{}]);
   const currentYear = new Date().getFullYear();
   const years = Array.from({ length: 51 }, (_, i) => currentYear - i);
 
-  const addSchool = (e) => {
+  const addExperience = (e) => {
     e.preventDefault();
-    setSchool((prev) => [...prev, {}]); // Add a new school entry
+    setExperience((prev) => [...prev, {}]); 
   };
 
-  const removeSchool = (index) => {
-    setSchool((prev) => prev.filter((_, i) => i !== index)); // Remove school by index
+  const removeExperience = (index) => {
+    setExperience((prev) => prev.filter((_, i) => i !== index)); 
   };
 
   return (
     <>
-      {school.map((_, index) => (
+      {experience.map((_, index) => (
         <div key={index} className="border p-4 rounded-md mb-4 relative">
           <button
-            onClick={() => removeSchool(index)}
+            onClick={() => removeExperience(index)}
             className="absolute top-2 right-2 text-primary-accent text-sm hover:underline"
           >
             Retire l&apos;Expérience
@@ -95,13 +95,13 @@ const School = () => {
         </div>
       ))}
       <Button
-        onClick={addSchool}
+        onClick={addExperience}
         className="text-white md:min-w-32 h-10 flex items-center cursor-pointer justify-center md:w-fit w-full mt-3 bg-slate-500 px-10 rounded-md"
       >
-        Ajouter Etablissement
+        Ajouter Expérience
       </Button>
     </>
   );
 };
 
-export default School;
+export default Experience;
