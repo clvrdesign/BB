@@ -32,6 +32,7 @@ const School = () => {
                 type="text"
                 placeholder="Etablissement"
                 className="h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none"
+                required
               />
             </fieldset>
             <fieldset>
@@ -40,6 +41,7 @@ const School = () => {
                 name={`diploma-${index}`}
                 id={`diploma-${index}`}
                 className="h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none"
+                required
               >
                 <option value="" disabled selected>
                   Sélectionner Diplôme
@@ -68,6 +70,7 @@ const School = () => {
                 type="text"
                 placeholder="Domaine d'Etude"
                 className="h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none"
+                required
               />
             </fieldset>
             <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
@@ -78,6 +81,7 @@ const School = () => {
                     name={`${label.toLowerCase().replace(/ /g, "-")}-${index}`}
                     id={`${label.toLowerCase().replace(/ /g, "-")}-${index}`}
                     className="h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none"
+                    required
                   >
                     <option value="" disabled selected>
                       Séléctioner l&apos;année

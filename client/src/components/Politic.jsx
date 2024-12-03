@@ -33,6 +33,7 @@ const Politic = () => {
                 type="text"
                 placeholder="Nom de la formation politique"
                 className="h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none"
+                required
               />
             </fieldset>
             <fieldset>
@@ -43,6 +44,7 @@ const Politic = () => {
                 name={`category-${index}`}
                 id={`category-${index}`}
                 className="h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none"
+                required
               >
                 <option value="" disabled selected>
                   Sélectionner Catégorie
@@ -62,6 +64,7 @@ const Politic = () => {
                 type="text"
                 placeholder="Poste/Responsabilités"
                 className="h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none"
+                required
               />
             </fieldset>
             <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
@@ -72,6 +75,7 @@ const Politic = () => {
                     name={`${label.toLowerCase().replace(/ /g, "-")}-${index}`}
                     id={`${label.toLowerCase().replace(/ /g, "-")}-${index}`}
                     className="h-10 w-full bg-gray-100 text-gray-700 text-sm px-4 rounded-md focus:border-primary-color border outline-none"
+                    required
                   >
                     <option value="" disabled selected>
                       Séléctioner l&apos;année
