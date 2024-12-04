@@ -22,7 +22,7 @@ const AddMem = () => {
               <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
                 <input
                   type="text"
-                  id=''
+                  id='userId'
                   placeholder="User ID du Candidat Parrainé"
                   className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none `}
                 />
@@ -42,25 +42,25 @@ const AddMem = () => {
 
               <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
                 <div className='flex items-center gap-1'>
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Candidat Député</label>
+                  <input type="checkbox" name="" id="depute" />
+                  <label htmlFor="depute" className='text-gray-600 text-sm'>Candidat Député</label>
                 </div>
 
                 <div className='flex items-center gap-1'>
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Candidat Conseiller Communal</label>
+                  <input type="checkbox" name="" id="conseiller" />
+                  <label htmlFor="conseiller" className='text-gray-600 text-sm'>Candidat Conseiller Communal</label>
                 </div>
                 <div className='flex items-center gap-1'>
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Candidat Sénateur</label>
+                  <input type="checkbox" name="" id="senateur" />
+                  <label htmlFor="senateur" className='text-gray-600 text-sm'>Candidat Sénateur</label>
                 </div>
                 <div className='flex items-center gap-1'>
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Candidat Conseiller Collinaire</label>
+                  <input type="checkbox" name="" id="collinaire" />
+                  <label htmlFor="collinaire" className='text-gray-600 text-sm'>Candidat Conseiller Collinaire</label>
                 </div>
                 <div className='flex items-center gap-1'>
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Candidat Chef de Quartier</label>
+                  <input type="checkbox" name="" id="deQuartier" />
+                  <label htmlFor="deQuartier" className='text-gray-600 text-sm'>Candidat Chef de Quartier</label>
                 </div>
 
               </div>
@@ -73,17 +73,16 @@ const AddMem = () => {
               <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
                 <input
                   type="text"
-                  id='confirmPassword'
+                  id='residence_One'
                   placeholder="Mukaza, Bujumbura"
                   className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none `}
                 />
                 <input
                   type="text"
-                  id='confirmPassword'
+                  id='residence_two'
                   placeholder="Mukaza, Bujumbura"
                   className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none `}
                 />
-
               </div>
 
             </fieldset>
@@ -106,21 +105,21 @@ const AddMem = () => {
 
               <div className="grid sm:grid-cols-3 grid-cols-1 gap-2">
                 <div className='flex gap-1'>
-                  <input type="radio" name="ethnic" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Umuganwa</label>
+                  <input type="radio" name="ethnic" id="ganwa" />
+                  <label htmlFor="ganwa" className='text-gray-600 text-sm'>Umuganwa</label>
                 </div>
                 <div className='flex gap-1'>
-                  <input type="radio" name="ethnic" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Umuhutu</label>
+                  <input type="radio" name="ethnic" id="hutu" />
+                  <label htmlFor="hutu" className='text-gray-600 text-sm'>Umuhutu</label>
                 </div>
 
                 <div className='flex gap-1'>
-                  <input type="radio" name="ethnic" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Umututsi</label>
+                  <input type="radio" name="ethnic" id="tutsi" />
+                  <label htmlFor="tutsi" className='text-gray-600 text-sm'>Umututsi</label>
                 </div>
                 <div className='flex gap-1'>
-                  <input type="radio" name="ethnic" id="add" />
-                  <label htmlFor="add" className='text-gray-600 text-sm'>Umutwa</label>
+                  <input type="radio" name="ethnic" id="twa" />
+                  <label htmlFor="twa" className='text-gray-600 text-sm'>Umutwa</label>
                 </div>
 
               </div>
