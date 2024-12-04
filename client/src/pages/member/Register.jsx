@@ -1,10 +1,8 @@
-import { useEffect, useState, useRef } from 'react';
+import { useState } from 'react';
 import Button from "../../components/Button";
 import { Link } from 'react-router-dom'
 
 const Register = () => {
-  const dayRef = useRef(null);
-  const [isFebruary, setIsFebruary] = useState(false);
   const [formValues, setFormValues] = useState({
     lastName: '',
     firstName: '',
@@ -15,9 +13,7 @@ const Register = () => {
     nationality_one: '',
     nationality_two: '',
     genre: '',
-    day: '',
-    month: '',
-    year: '',
+    birthDate: '',
     birthPlace: '',
     country: '',
     phoneSMS: '',
@@ -25,40 +21,21 @@ const Register = () => {
   });
   const [errors, setErrors] = useState({});
 
-  const checkMonth = () => {
-    if (dayRef.current && dayRef.current.value === '2') {
-      setIsFebruary(true);
-    } else {
-      setIsFebruary(false);
-    }
-  };
-
-  useEffect(() => {
-    const handleChange = () => {
-      checkMonth();
-    };
-
-    const daySelect = dayRef.current;
-    if (daySelect) {
-      daySelect.addEventListener('change', handleChange);
-    }
-
-    return () => {
-      if (daySelect) {
-        daySelect.removeEventListener('change', handleChange);
-      }
-    };
-  }, []);
 
   const validateForm = () => {
     const newErrors = {};
     if (!formValues.lastName) newErrors.lastName = 'Le nom est requis';
     if (!formValues.firstName) newErrors.firstName = 'Le prénom est requis';
+    if (!formValues.username) newErrors.username = 'Le nom d\'utilisateur est requis';
     if (!formValues.email) newErrors.email = 'L\'Email est requis';
     if (!/\S+@\S+\.\S+/.test(formValues.email)) newErrors.email = 'L\'email est invalide';
+    if (!formValues.password) newErrors.password = 'Le mot de passe est requis';
+    if (!formValues.confirmPassword) newErrors.confirmPassword = 'Le mot de passe est requis';
+    if (!formValues.genre) newErrors.genre = 'Sélectionner votre genre';
+    if (!formValues.date) newErrors.date = 'La date de naissance est requis';
+    if (!formValues.birthPlace) newErrors.birthPlace = 'Le lieu de naissance est requis';
     if (!formValues.phoneSMS) newErrors.phoneSMS = 'Le numéro de téléphone est requis';
-    if (!/^[0-9]{8}$/.test(formValues.phoneSMS)) newErrors.phoneSMS = 'Phone number must be 8 digits';
-    if (!formValues.year) newErrors.year = 'Year of birth is required';
+    if (!formValues.phoneWhatsApp) newErrors.phoneWhatsApp = 'Le numéro de téléphone est requis';
     return newErrors;
   };
 
@@ -85,20 +62,22 @@ const Register = () => {
           <form onSubmit={handleSubmit} className="w-full flex flex-col gap-3">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <div className="flex flex-col gap-1 mb-2">
-                <label className="text-gray-500 text-sm" htmlFor="name">Nom(s)</label>
+                <label className="text-gray-500 text-sm" htmlFor="firstName">Nom(s)</label>
                 <input
                   type="text"
-                  id='name'
+                  id='firstName'
                   placeholder="Bukuru"
+                  onChange={''}
+                  value={''}
                   className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none ${errors.firstName ? 'border-red-500' : ''}`}
                 />
-                {errors.lastName && <span className="text-red-500 text-sm">{errors.firstName}</span>}
+                {errors.firstName && <span className="text-red-500 text-sm">{errors.firstName}</span>}
               </div>
               <div className="flex flex-col gap-1 mb-2">
-                <label className="text-gray-500 text-sm" htmlFor="name">Prénom(s)</label>
+                <label className="text-gray-500 text-sm" htmlFor="lastName">Prénom(s)</label>
                 <input
                   type="text"
-                  id='name'
+                  id='lastName'
                   placeholder="Jean"
                   className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none ${errors.lastName ? 'border-red-500' : ''}`}
                 />
@@ -106,14 +85,14 @@ const Register = () => {
               </div>
             </div>
             <div className="flex flex-col gap-1 mb-2">
-              <label className="text-gray-500 text-sm" htmlFor="email">Nom d&apos;utilisateur</label>
+              <label className="text-gray-500 text-sm" htmlFor="username">Nom d&apos;utilisateur</label>
               <input
-                type="email"
-                id='email'
+                type="text"
+                id='username'
                 placeholder="iamjohn"
-                className={`h-10 bg-gray-100 px-4 text-sm rounded-md focus:border-primary-color border outline-none ${errors.email ? 'border-red-500' : ''}`}
+                className={`h-10 bg-gray-100 px-4 text-sm rounded-md focus:border-primary-color border outline-none ${errors.username ? 'border-red-500' : ''}`}
               />
-              {errors.lastName && <span className="text-red-500 text-sm">{errors.email}</span>}
+              {errors.username && <span className="text-red-500 text-sm">{errors.username}</span>}
             </div>
             <div className="flex flex-col gap-1 mb-2">
               <label className="text-gray-500 text-sm" htmlFor="email">Email</label>
@@ -123,7 +102,7 @@ const Register = () => {
                 placeholder="Jean@email.com"
                 className={`h-10 bg-gray-100 px-4 text-sm rounded-md focus:border-primary-color border outline-none ${errors.email ? 'border-red-500' : ''}`}
               />
-              {errors.lastName && <span className="text-red-500 text-sm">{errors.email}</span>}
+              {errors.email && <span className="text-red-500 text-sm">{errors.email}</span>}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -133,9 +112,9 @@ const Register = () => {
                   type="text"
                   id='password'
                   placeholder="********"
-                  className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none ${errors.firstName ? 'border-red-500' : ''}`}
+                  className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none ${errors.password ? 'border-red-500' : ''}`}
                 />
-                {errors.lastName && <span className="text-red-500 text-sm">{errors.firstName}</span>}
+                {errors.password && <span className="text-red-500 text-sm">{errors.password}</span>}
               </div>
 
               <div className="flex flex-col gap-1 mb-2">
@@ -144,16 +123,16 @@ const Register = () => {
                   type="text"
                   id='confirmPassword'
                   placeholder="********"
-                  className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none ${errors.lastName ? 'border-red-500' : ''}`}
+                  className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none ${errors.confirmPassword ? 'border-red-500' : ''}`}
                 />
-                {errors.lastName && <span className="text-red-500 text-sm">{errors.lastName}</span>}
+                {errors.confirmPassword && <span className="text-red-500 text-sm">{errors.confirmPassword}</span>}
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <div className="flex flex-col gap-1 mb-2">
                 <label className="text-gray-500 text-sm">Nationalité 1</label>
-                <select id="country" name="country" className="h-10 bg-gray-100 text-gray-600 px-4 rounded-md focus:border-primary-color border outline-none">
+                <select id="country" name="country" className="h-10 bg-gray-100 text-sm text-gray-600 px-4 rounded-md focus:border-primary-color border outline-none">
                   <option value="Afghanistan">Afghanistan</option>
                   <option value="Åland Islands">Åland Islands</option>
                   <option value="Albania">Albania</option>
@@ -403,7 +382,7 @@ const Register = () => {
 
               <div className="flex flex-col gap-1 mb-2">
                 <label className="text-gray-500 text-sm">Nationalité 2</label>
-                <select id="country" name="country" className="h-10 bg-gray-100 text-gray-600 px-4 rounded-md focus:border-primary-color border outline-none">
+                <select id="country" name="country" className="h-10 bg-gray-100 text-sm text-gray-600 px-4 rounded-md focus:border-primary-color border outline-none">
                   <option selected disabled>Selectionner la nationalité</option>
                   <option value="Afghanistan">Afghanistan</option>
                   <option value="Åland Islands">Åland Islands</option>
@@ -655,7 +634,7 @@ const Register = () => {
 
             <div className="flex flex-col gap-1 mb-2">
               <label className="text-gray-500 text-sm">Genre</label>
-              <div className="flex gap-10 h-10 bg-gray-100 px-4 rounded-md">
+              <div className={`flex gap-10 h-10 bg-gray-100 px-4 rounded-md ${errors.genre ? 'border border-red-500' : ''}`}>
                 <div className="flex items-center gap-2">
                   <input type="radio" id="male" name='genre' value="Male" className="h-4 w-4 text-sm" />
                   <label htmlFor="male" className="text-gray-700 text-sm">Homme</label>
@@ -665,53 +644,30 @@ const Register = () => {
                   <label htmlFor="female" className="text-gray-700 text-sm">Femme</label>
                 </div>
               </div>
+              {errors.genre && <span className="text-red-500 text-sm">{errors.genre}</span>}
             </div>
             <div className="flex flex-col gap-1 mb-2">
               <label className="text-gray-500 text-sm">Date de naissance</label>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                <select ref={dayRef} className="h-10 bg-gray-100 text-gray-600 px-4 rounded-md focus:border-primary-color border outline-none">
-                  <option value="" disabled selected>Mois</option>
-                  <option value="1">Janvier</option>
-                  <option value="2">Fevrier</option>
-                  <option value="3">Mars</option>
-                  <option value="4">Avril</option>
-                  <option value="5">Mai</option>
-                  <option value="6">Juin</option>
-                  <option value="7">Juillet</option>
-                  <option value="8">Aout</option>
-                  <option value="9">Septembre</option>
-                  <option value="10">Octobre</option>
-                  <option value="11">Novembre</option>
-                  <option value="12">Decembre</option>
-                </select>
-                <select className="h-10 bg-gray-100 text-gray-600 text-sm px-4 rounded-md focus:border-primary-color border outline-none">
-                  <option value="" disabled selected>Jour</option>
-                  {Array.from({ length: isFebruary ? 28 : 31 }, (_, i) => (
-                    <option key={i + 1} value={i + 1}>{i + 1}</option>
-                  ))}
-                </select>
-                <input
-                  type="text"
-                  name='year'
-                  placeholder="Année"
-                  className="h-10 text-sm bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none"
-                />
-              </div>
+              <input
+              type="date"
+              name="date_of_birth"
+              className={`h-10 bg-gray-100 text-gray-600 px-4 rounded-md focus:border-primary-color border outline-none ${errors.date ? 'border-red-500' : ''}`}/>
+              {errors.date && <span className="text-red-500 text-sm">{errors.date}</span>}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <div className="flex flex-col gap-1 mb-2">
-                <label className="text-gray-500 text-sm">Lieu de naissance</label>
+                <label className="text-gray-500 text-sm" htmlFor='birthPlace'>Lieu de naissance</label>
                 <input
                   type="text"
-                  id='confirmPassword'
+                  id='birthPlace'
                   placeholder="Mukaza, Bujumbura"
-                  className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none ${errors.lastName ? 'border-red-500' : ''}`}
-                />
+                  className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none ${errors.birthPlace ? 'border-red-500' : ''}`}/>
+                  {errors.birthPlace && <span className="text-red-500 text-sm">{errors.birthPlace}</span>}
               </div>
               <div className="flex flex-col gap-1 mb-2">
                 <label className="text-gray-500 text-sm">Pays</label>
-                <select id="country" name="country" className="h-10 bg-gray-100 text-gray-600 px-4 rounded-md focus:border-primary-color border outline-none">
+                <select id="country" name="country" className="h-10 bg-gray-100 text-sm text-gray-600 px-4 rounded-md focus:border-primary-color border outline-none">
                   <option value="Afghanistan">Afghanistan</option>
                   <option value="Åland Islands">Åland Islands</option>
                   <option value="Albania">Albania</option>
@@ -963,7 +919,7 @@ const Register = () => {
             <div className="flex flex-col gap-1 mb-2">
               <label className="text-gray-500 text-sm">Telephone/SMS</label>
               <div className="flex gap-2 sm:flex-row flex-col items-center">
-                <select className="w-full h-10 text-sm bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none">
+                <select className="w-full h-10 text-sm text-gray-600 bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none">
                   <option data-countryCode="BI" value="44" selected>Burundi (+257)</option>
                   <optgroup label="Other countries">
                     <option data-countryCode="DZ" value="213">Algeria (+213)</option>
@@ -1186,14 +1142,15 @@ const Register = () => {
                   type="text"
                   name='phoneSMS'
                   placeholder="79 999 999"
-                  className="w-full h-10 text-sm bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none"
+                  className={`w-full h-10 text-sm text-gray-600 bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none ${errors.phoneSMS ? 'border-red-500' : ''}`}
                 />
               </div>
+              {errors.phoneSMS && <span className="text-red-500 text-sm">{errors.phoneSMS}</span>}
             </div>
             <div className="flex flex-col gap-1">
               <label className="text-gray-500 text-sm">Telephone/WhatsApp</label>
               <div className="flex gap-2 sm:flex-row flex-col items-center">
-                <select className="w-full h-10 text-sm bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none">
+                <select className="w-full h-10 text-sm text-gray-600 bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none">
                   <option data-countryCode="BI" value="44" selected>Burundi (+257)</option>
                   <optgroup label="Other countries">
                     <option data-countryCode="DZ" value="213">Algeria (+213)</option>
@@ -1416,13 +1373,15 @@ const Register = () => {
                   type="text"
                   name='phoneSMS'
                   placeholder="79 999 999"
-                  className="w-full h-10 text-sm bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none"
+                  className={`w-full h-10 text-sm text-gray-600 bg-gray-100 px-4 rounded-md focus:border-primary-color border outline-none ${errors.phoneWhatsApp ? 'border-red-500' : ''}`}
                 />
+                
               </div>
+              {errors.phoneWhatsApp && <span className="text-red-500 text-sm">{errors.phoneWhatsApp}</span>}
             </div>
             <div className="flex justify-start">
               <label className="text-gray-500 text-sm font-bold my-4 flex items-start">
-                <input className="leading-loose text-pink-600 top-0 translate-y-1" type="checkbox" required />
+                <input className="leading-loose text-pink-600 top-0 translate-y-1" type="checkbox" />
                 <small className="ml-2 font-normal text-gray-600 text-left">Accept the
                   <Link to="#"
                     className="text-primary-accent px-2">
