@@ -46,51 +46,51 @@ const AddMem = () => {
 
               <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
                 <div className="flex gap-1">
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className="text-gray-600 text-sm">
+                  <input type="checkbox" name="" id="addMember" />
+                  <label htmlFor="addMember" className="text-gray-600 text-sm">
                     Enregistrer membres
                   </label>
                 </div>
 
                 <div className="flex items-center gap-1">
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className="text-gray-600 text-sm">
+                  <input type="checkbox" name="" id="administration" />
+                  <label htmlFor="administration" className="text-gray-600 text-sm">
                     Administration/Bureautique
                   </label>
                 </div>
                 <div className="flex gap-1">
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className="text-gray-600 text-sm">
+                  <input type="checkbox" name="" id="media" />
+                  <label htmlFor="media" className="text-gray-600 text-sm">
                     Communication/Média
                   </label>
                 </div>
                 <div className="flex gap-1">
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className="text-gray-600 text-sm">
+                  <input type="checkbox" name="" id="log" />
+                  <label htmlFor="log" className="text-gray-600 text-sm">
                     Transport/Logistique
                   </label>
                 </div>
                 <div className="flex gap-1">
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className="text-gray-600 text-sm">
+                  <input type="checkbox" name="" id="proto" />
+                  <label htmlFor="proto" className="text-gray-600 text-sm">
                     Sécurité/Protocole
                   </label>
                 </div>
                 <div className="flex gap-1">
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className="text-gray-600 text-sm">
+                  <input type="checkbox" name="" id="mobilisation" />
+                  <label htmlFor="mobilisation" className="text-gray-600 text-sm">
                     Mobilisation/Propagande
                   </label>
                 </div>
                 <div className="flex gap-1">
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className="text-gray-600 text-sm">
+                  <input type="checkbox" name="" id="observation" />
+                  <label htmlFor="observation" className="text-gray-600 text-sm">
                     Mandataire/Observateur politique
                   </label>
                 </div>
                 <div className="flex gap-1">
-                  <input type="checkbox" name="" id="add" />
-                  <label htmlFor="add" className="text-gray-600 text-sm">
+                  <input type="checkbox" name="" id="rejoindre" />
+                  <label htmlFor="rejoindre" className="text-gray-600 text-sm">
                     Rejoindre nos organes dirigeants
                   </label>
                 </div>
@@ -112,7 +112,7 @@ const AddMem = () => {
                 <input
                   type="text"
                   id="confirmPassword"
-                  placeholder="Mukaza, Bujumbura"
+                  placeholder="Bwiza, 1ère Avenue"
                   className={`h-10 bg-gray-100 text-sm px-4 rounded-md focus:border-primary-color border outline-none `}
                 />
               </div>
